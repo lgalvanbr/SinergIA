@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/*
+ * Color tokens follow Universidad de los Andes' official brand manual
+ * (manual-imagen-2021.pdf, sec. 2.1.3): the two institutional colors are
+ * black (#000000) and yellow (#FFFF00). Pure yellow fails text contrast on
+ * white, so --yellow-ink is a darker tint of the same hue used only for
+ * small text/links, while --yellow itself is reserved for fills/badges that
+ * always sit under black text or white icons, matching how the university's
+ * own shield pairs black on yellow.
+ */
+:root {
+  --background: #ffffff;
+  --background-subtle: #f5f5f7;
+  --foreground: #000000;
+  --foreground-secondary: #6e6e73;
+  --border-soft: #e5e5e7;
+  --border-strong: #d2d2d7;
+  --yellow: #ffde00;
+  --yellow-ink: #7a6100;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-border-soft: var(--border-soft);
+  --color-border-strong: var(--border-strong);
+  --color-yellow: var(--yellow);
+  --color-yellow-ink: var(--yellow-ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(255, 222, 0, 0.4);
+  color: var(--foreground);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #c7c7cc;
+  border-radius: 9999px;
+  border: 2px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aeaeb2;
+}
+
+#top {
+  overflow-x: clip;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Auto-advancing tab progress indicator (src/components/Tabs.tsx) */
+@keyframes tab-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
