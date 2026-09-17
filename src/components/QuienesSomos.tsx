@@ -448,9 +448,15 @@ const tabs: TabItem[] = [
 
 export function QuienesSomos() {
   return (
-    <section id="quienes-somos" className="relative py-24 sm:py-32 px-5 sm:px-8 bg-white">
+    <section id="quienes-somos" className="relative py-24 sm:py-32 px-5 sm:px-8 bg-white overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="max-w-2xl mb-16">
+        <div className="relative max-w-2xl mb-16">
+          {/* eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used elsewhere on this site for non-optimized real assets */}
+          <img
+            src="/brand/sinergia-logo-horizontal.png"
+            alt=""
+            className="hidden sm:block absolute top-1/2 -translate-y-1/2 left-full ml-8 h-24 lg:h-32 w-auto invert opacity-[0.08] pointer-events-none select-none"
+          />
           <h1 className="text-4xl sm:text-5xl font-semibold text-black tracking-tight text-balance mb-5">
             Investigación en IA desde la ingeniería civil y ambiental
           </h1>

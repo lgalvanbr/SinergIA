@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { easeApple } from "@/lib/motion";
-import { UnitSignature } from "./UnitSignature";
+import { UniandesLogo } from "./UniandesLogo";
 
 interface NavItem {
   label: string;
@@ -80,7 +80,16 @@ export function Navbar() {
             onDark ? "focus-visible:ring-white focus-visible:ring-offset-black" : "focus-visible:ring-black"
           }`}
         >
-          <UnitSignature dark={onDark} compact />
+          <div className="flex items-center gap-3">
+            <UniandesLogo className="h-6 sm:h-7 w-auto shrink-0" fill={onDark ? "#FFFFFF" : "#1F1F1C"} />
+            <span className={`h-8 sm:h-10 w-px shrink-0 ${onDark ? "bg-white/30" : "bg-black/20"}`} />
+            {/* eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used elsewhere on this site for non-optimized real assets */}
+            <img
+              src="/brand/sinergia-logo-horizontal.png"
+              alt="SinergIA"
+              className={`h-8 sm:h-10 w-auto shrink-0 ${onDark ? "" : "invert"}`}
+            />
+          </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
