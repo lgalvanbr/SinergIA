@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 const features = [
   "6 capas de indicadores departamentales: pobreza (IPM), densidad vial, competitividad (IDC), Saber 11, hacinamiento carcelario y centros de innovación",
@@ -57,13 +58,32 @@ export function InfraestructuraVisibleProject() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-6 pt-6 border-t border-black/10">
-        <Link
-          href="/infraestructura-visible"
-          className="text-[15px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
-        >
-          Ver Infraestructura Visible
-        </Link>
+      {/* Embedded live preview — selecting this project shows the real, working
+          sub-site right here instead of just linking out to it. The iframe'd
+          page carries its own nav (Visualiza/Explora/Biblioteca/...), so this
+          panel alone lets a visitor actually browse it without leaving
+          /proyectos. */}
+      <div className="rounded-2xl border border-border-soft overflow-hidden bg-background-subtle">
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-border-soft bg-white">
+          <span className="text-xs font-medium text-foreground-secondary">
+            infraestructura-visible/visualiza
+          </span>
+          <Link
+            href="/infraestructura-visible"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-black hover:text-yellow-ink transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
+          >
+            Abrir en pantalla completa
+            <ExternalLink className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+        <iframe
+          src="/infraestructura-visible/visualiza"
+          title="Infraestructura Visible"
+          loading="lazy"
+          className="w-full h-[640px] sm:h-[760px] border-0 block"
+        />
       </div>
     </div>
   );

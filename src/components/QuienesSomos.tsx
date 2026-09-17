@@ -1,4 +1,9 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "motion/react";
 import { Mail, ExternalLink } from "lucide-react";
+import { easeApple } from "@/lib/motion";
 import { Tabs, type TabItem } from "./Tabs";
 
 const researchGroups = [
@@ -66,96 +71,215 @@ const physicalLabs = [
   "Suelos (ML-106)",
 ];
 
-function ProfileCard({
-  photo,
-  eyebrow,
-  name,
-  desc,
-  lines,
-  facts,
-  links,
-}: {
-  photo?: string;
+interface TeamMember {
+  id: string;
+  photo: string;
   eyebrow: string;
   name: string;
   desc: string[];
   lines: string[];
   facts: { label: string; value: string }[];
   links: { label: string; href: string }[];
-}) {
+}
+
+const team: TeamMember[] = [
+  {
+    id: "nelly-garcia",
+    photo: "/team/nelly-garcia.jpg",
+    eyebrow: "Profesora asistente",
+    name: "Nelly García López",
+    desc: [
+      "Investiga cómo las personas, los procesos y las tecnologías interactúan para mejorar la colaboración, el desempeño de los proyectos y la sostenibilidad del entorno construido. Su trabajo integra ingeniería y gestión de la construcción, gestión de procesos y tecnología, a lo largo del diseño, la construcción y la operación. Hace parte del grupo IN2GECO del Departamento de Ingeniería Civil y Ambiental.",
+    ],
+    lines: [
+      "Informática de la construcción, BIM y gemelos digitales",
+      "Lean construction y sistemas de producción",
+      "Construcción industrializada y Construcción 4.0/5.0",
+      "Economía circular y sostenibilidad del entorno construido",
+    ],
+    facts: [
+      { label: "Doctorado", value: "Stanford University" },
+      { label: "Maestría", value: "Stanford University · Uniandes" },
+      { label: "Pregrado", value: "Universidad de los Andes" },
+      { label: "Grupo de investigación", value: "IN2GECO" },
+    ],
+    links: [
+      { label: "ne-garci@uniandes.edu.co", href: "mailto:ne-garci@uniandes.edu.co" },
+      {
+        label: "Perfil en el departamento",
+        href: "https://civilyambiental.uniandes.edu.co/en/professors/nelly-paola-garcia-lopez",
+      },
+    ],
+  },
+  {
+    id: "juan-sebastian-hernandez",
+    photo: "/team/juan-sebastian-hernandez.jpg",
+    eyebrow: "Profesor asistente",
+    name: "Juan Sebastián Hernández Suárez",
+    desc: [
+      "Juan Sebastián es ingeniero civil con maestría en Ingeniería - Recursos Hidráulicos de la Universidad Nacional de Colombia, y doctor en Ingeniería de Biosistemas de Michigan State University. Recientemente fue investigador posdoctoral en la Universidad de Stanford, estudiando mercados de agua y sus efectos sobre la salud de los ecosistemas acuáticos. En Colombia ha trabajado con el Ministerio de Ambiente y Desarrollo Sostenible y la Autoridad Nacional de Licencias Ambientales en temas de caudales ambientales, regulación hídrica y gestión integral del agua.",
+      "Como profesor asistente de la Universidad de los Andes, continúa utilizando modelación numérica, inteligencia artificial, sistemas de información geográfica y métodos evolucionarios de optimización multiobjetivo para entender y simular sistemas humanos y naturales acoplados en un contexto de variabilidad y cambio climático — con el fin de asistir la toma de decisiones multicriterio, el diseño de infraestructura civil y la formulación de políticas públicas. Le interesan particularmente las dinámicas multisectoriales en la intersección entre seguridad hídrica, alimentaria y energética, infraestructura civil y biodiversidad.",
+      "Dirige los laboratorios de Geomática y de Hidráulica del departamento. Dicta Sistemas de Información Geográfica en pregrado, y modelación de sistemas y procesos hidrológicos, modelación de hidrosistemas y gestión de recursos hídricos en los programas de posgrado.",
+    ],
+    lines: [
+      "Modelación hidrológica y de sistemas de recursos hídricos",
+      "Seguridad hídrica, alimentaria y energética, e infraestructura civil",
+      "Optimización multiobjetivo e inteligencia artificial aplicadas al agua",
+      "Modelación de mercados de derechos de agua y sistemas de información geográfica",
+    ],
+    facts: [
+      { label: "Doctorado", value: "Michigan State University (Biosystems Eng.)" },
+      { label: "Posdoctorado", value: "Stanford University" },
+      { label: "Maestría", value: "Universidad Nacional de Colombia" },
+      { label: "Dirige", value: "Laboratorios de Geomática e Hidráulica" },
+    ],
+    links: [
+      { label: "js.hernandezs@uniandes.edu.co", href: "mailto:js.hernandezs@uniandes.edu.co" },
+      { label: "Perfil académico", href: "https://academia.uniandes.edu.co/js.hernandezs" },
+    ],
+  },
+  {
+    id: "luis-carlos-galvan",
+    photo: "/team/luis-galvan.jpg",
+    eyebrow: "Asistente graduado de investigación",
+    name: "Luis Carlos Galvan",
+    desc: [
+      "Ingeniero civil con conocimientos en ingeniería de sistemas y robótica. Actualmente cursa la Maestría en Inteligencia Artificial y Datos aplicada a infraestructura del Departamento de Ingeniería Civil y Ambiental.",
+      "Apoya al laboratorio con investigación y conocimientos avanzados en inteligencia artificial y desarrollo web — incluyendo la construcción de este sitio y de la plataforma Infraestructura Visible.",
+    ],
+    lines: [
+      "Inteligencia artificial aplicada a infraestructura y ciudades",
+      "Desarrollo web y visualización de datos geoespaciales",
+      "Ingeniería de sistemas y robótica",
+      "Modelos de datos e infraestructura de información",
+    ],
+    facts: [
+      { label: "Pregrado", value: "Ingeniería Civil" },
+      { label: "Maestría (en curso)", value: "IA y Datos aplicada a Infraestructura" },
+      { label: "Conocimientos", value: "Ingeniería de sistemas · Robótica" },
+      { label: "Enfoque", value: "Inteligencia artificial · Desarrollo web" },
+    ],
+    links: [
+      { label: "l.galvan@uniandes.edu.co", href: "mailto:l.galvan@uniandes.edu.co" },
+      { label: "GitHub", href: "https://github.com/lgalvanbr" },
+    ],
+  },
+];
+
+/**
+ * Same "selectable card grid + detail panel below" pattern already used for
+ * /proyectos (see Proyectos.tsx + AmbianceStage) — reused here on purpose so
+ * the team grid stays a UNIFORM height (just a portrait photo + name/role)
+ * no matter how long any one person's bio is, instead of stretching or
+ * cramping neighboring cards to match whichever bio happens to be longest.
+ */
+function TeamShowcase() {
+  const [activeId, setActiveId] = useState(team[0].id);
+  const active = team.find((p) => p.id === activeId) ?? team[0];
+
   return (
-    <div className="py-8 border-b border-black/10 last:border-b-0">
-      <div className="flex items-start gap-5 mb-4">
-        {photo && (
-          // eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used for research-group logos in this file
-          <img
-            src={photo}
-            alt={name}
-            className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover flex-shrink-0 border border-black/10"
-          />
-        )}
-        <div>
-          <p className="text-xs font-medium tracking-[0.14em] uppercase text-yellow-ink mb-2">
-            {eyebrow}
-          </p>
-          <h3 className="text-xl font-semibold text-black">{name}</h3>
-        </div>
-      </div>
-      <div className="mb-6 max-w-2xl space-y-3">
-        {desc.map((p, i) => (
-          <p key={i} className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed">
-            {p}
-          </p>
-        ))}
+    <div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+        {team.map((p) => {
+          const isActive = p.id === activeId;
+          return (
+            <button
+              key={p.id}
+              type="button"
+              onClick={() => setActiveId(p.id)}
+              aria-pressed={isActive}
+              className={`text-left rounded-2xl overflow-hidden border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black ${
+                isActive ? "border-black" : "border-border-soft hover:border-border-strong"
+              }`}
+            >
+              <div className="aspect-[4/5] w-full overflow-hidden bg-background-subtle">
+                {/* eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used for research-group logos in this file */}
+                <img src={p.photo} alt={p.name} className="w-full h-full object-cover" />
+              </div>
+              <div className={`p-3 sm:p-4 ${isActive ? "bg-black" : "bg-white"}`}>
+                <p
+                  className={`text-[11px] font-medium tracking-[0.1em] uppercase mb-1 ${
+                    isActive ? "text-yellow" : "text-yellow-ink"
+                  }`}
+                >
+                  {p.eyebrow}
+                </p>
+                <h3
+                  className={`text-[13px] sm:text-[15px] font-semibold leading-snug ${
+                    isActive ? "text-white" : "text-black"
+                  }`}
+                >
+                  {p.name}
+                </h3>
+              </div>
+            </button>
+          );
+        })}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-[1fr_14rem] gap-8">
-        <div>
-          <p className="text-xs font-medium tracking-[0.1em] uppercase text-foreground-secondary mb-3">
-            Líneas de investigación
-          </p>
-          <ul className="space-y-2">
-            {lines.map((line) => (
-              <li
-                key={line}
-                className="pl-4 border-l-2 border-yellow text-[15px] text-foreground-secondary leading-relaxed"
-              >
-                {line}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="space-y-3">
-          {facts.map((f) => (
-            <div key={f.label}>
-              <p className="text-xs font-medium tracking-[0.1em] uppercase text-foreground-secondary">
-                {f.label}
-              </p>
-              <p className="text-[15px] text-black">{f.value}</p>
-            </div>
+      <motion.div
+        key={active.id}
+        initial={{ opacity: 0, y: 6 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.25, ease: easeApple }}
+        className="p-6 sm:p-8 rounded-2xl bg-background-subtle border border-border-soft"
+      >
+        <div className="mb-6 max-w-2xl space-y-3">
+          {active.desc.map((p, i) => (
+            <p key={i} className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed">
+              {p}
+            </p>
           ))}
         </div>
-      </div>
 
-      <div className="flex flex-wrap gap-x-6 gap-y-2 pt-6 mt-6 border-t border-black/10">
-        {links.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target={link.href.startsWith("http") ? "_blank" : undefined}
-            rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-            className="inline-flex items-center gap-1.5 text-[15px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
-          >
-            {link.href.startsWith("mailto:") ? (
-              <Mail className="w-4 h-4" />
-            ) : (
-              <ExternalLink className="w-4 h-4" />
-            )}
-            {link.label}
-          </a>
-        ))}
-      </div>
+        <div className="grid grid-cols-1 sm:grid-cols-[1fr_14rem] gap-8">
+          <div>
+            <p className="text-xs font-medium tracking-[0.1em] uppercase text-foreground-secondary mb-3">
+              Líneas de investigación
+            </p>
+            <ul className="space-y-2">
+              {active.lines.map((line) => (
+                <li
+                  key={line}
+                  className="pl-4 border-l-2 border-yellow text-[15px] text-foreground-secondary leading-relaxed"
+                >
+                  {line}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            {active.facts.map((f) => (
+              <div key={f.label}>
+                <p className="text-xs font-medium tracking-[0.1em] uppercase text-foreground-secondary">
+                  {f.label}
+                </p>
+                <p className="text-[15px] text-black">{f.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-x-6 gap-y-2 pt-6 mt-6 border-t border-black/10">
+          {active.links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+              className="inline-flex items-center gap-1.5 text-[15px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
+            >
+              {link.href.startsWith("mailto:") ? (
+                <Mail className="w-4 h-4" />
+              ) : (
+                <ExternalLink className="w-4 h-4" />
+              )}
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }
@@ -195,65 +319,8 @@ const tabs: TabItem[] = [
     id: "equipo",
     label: "Equipo",
     content: (
-      <div className="max-w-3xl">
-        <div className="border-t border-black/10">
-          <ProfileCard
-            photo="/team/nelly-garcia.jpg"
-            eyebrow="Profesora asistente"
-            name="Nelly García López"
-            desc={[
-              "Investiga en la intersección de informática de la construcción, gerencia de proyectos y principios lean, con énfasis en cómo el modelado y la visualización pueden resolver problemas prácticos de entrega de proyectos de construcción. Hace parte del grupo IN2GECO del departamento.",
-            ]}
-            lines={[
-              "Informática de la construcción y BIM (Building Information Modeling)",
-              "Construcción industrializada y Construcción 4.0/5.0",
-              "Lean construction y sistemas de producción",
-              "Sostenibilidad del entorno construido",
-            ]}
-            facts={[
-              { label: "Doctorado", value: "Stanford University" },
-              { label: "Maestría", value: "Stanford University · Universidad de los Andes" },
-              { label: "Pregrado", value: "Universidad de los Andes" },
-              { label: "Grupo de investigación", value: "IN2GECO" },
-            ]}
-            links={[
-              { label: "ne-garci@uniandes.edu.co", href: "mailto:ne-garci@uniandes.edu.co" },
-              {
-                label: "Perfil en el departamento",
-                href: "https://civilyambiental.uniandes.edu.co/en/professors/nelly-paola-garcia-lopez",
-              },
-            ]}
-          />
-          <ProfileCard
-            photo="/team/juan-sebastian-hernandez.jpg"
-            eyebrow="Profesor asistente"
-            name="Juan Sebastián Hernández Suárez"
-            desc={[
-              "Juan Sebastián es ingeniero civil con maestría en Ingeniería - Recursos Hidráulicos de la Universidad Nacional de Colombia, y doctor en Ingeniería de Biosistemas de Michigan State University. Recientemente fue investigador posdoctoral en la Universidad de Stanford, estudiando mercados de agua y sus efectos sobre la salud de los ecosistemas acuáticos. En Colombia ha trabajado con el Ministerio de Ambiente y Desarrollo Sostenible y la Autoridad Nacional de Licencias Ambientales en temas de caudales ambientales, regulación hídrica y gestión integral del agua.",
-              "Como profesor asistente de la Universidad de los Andes, continúa utilizando modelación numérica, inteligencia artificial, sistemas de información geográfica y métodos evolucionarios de optimización multiobjetivo para entender y simular sistemas humanos y naturales acoplados en un contexto de variabilidad y cambio climático — con el fin de asistir la toma de decisiones multicriterio, el diseño de infraestructura civil y la formulación de políticas públicas. Le interesan particularmente las dinámicas multisectoriales en la intersección entre seguridad hídrica, alimentaria y energética, infraestructura civil y biodiversidad.",
-              "Dirige los laboratorios de Geomática y de Hidráulica del departamento. Dicta Sistemas de Información Geográfica en pregrado, y modelación de sistemas y procesos hidrológicos, modelación de hidrosistemas y gestión de recursos hídricos en los programas de posgrado.",
-            ]}
-            lines={[
-              "Modelación hidrológica y de sistemas de recursos hídricos",
-              "Seguridad hídrica, alimentaria y energética, e infraestructura civil",
-              "Optimización multiobjetivo e inteligencia artificial aplicadas al agua",
-              "Modelación de mercados de derechos de agua y sistemas de información geográfica",
-            ]}
-            facts={[
-              { label: "Doctorado", value: "Michigan State University (Biosystems Eng.)" },
-              { label: "Posdoctorado", value: "Stanford University" },
-              { label: "Maestría", value: "Universidad Nacional de Colombia" },
-              { label: "Dirige", value: "Laboratorios de Geomática e Hidráulica" },
-            ]}
-            links={[
-              {
-                label: "js.hernandezs@uniandes.edu.co",
-                href: "mailto:js.hernandezs@uniandes.edu.co",
-              },
-              { label: "Perfil académico", href: "https://academia.uniandes.edu.co/js.hernandezs" },
-            ]}
-          />
-        </div>
+      <div>
+        <TeamShowcase />
 
         <div className="pt-8">
           <p className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed mb-4">
