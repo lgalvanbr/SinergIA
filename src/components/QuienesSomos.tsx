@@ -67,6 +67,7 @@ const physicalLabs = [
 ];
 
 function ProfileCard({
+  photo,
   eyebrow,
   name,
   desc,
@@ -74,22 +75,39 @@ function ProfileCard({
   facts,
   links,
 }: {
+  photo?: string;
   eyebrow: string;
   name: string;
-  desc: string;
+  desc: string[];
   lines: string[];
   facts: { label: string; value: string }[];
   links: { label: string; href: string }[];
 }) {
   return (
     <div className="py-8 border-b border-black/10 last:border-b-0">
-      <p className="text-xs font-medium tracking-[0.14em] uppercase text-yellow-ink mb-2">
-        {eyebrow}
-      </p>
-      <h3 className="text-xl font-semibold text-black mb-2">{name}</h3>
-      <p className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed mb-6 max-w-2xl">
-        {desc}
-      </p>
+      <div className="flex items-start gap-5 mb-4">
+        {photo && (
+          // eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used for research-group logos in this file
+          <img
+            src={photo}
+            alt={name}
+            className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover flex-shrink-0 border border-black/10"
+          />
+        )}
+        <div>
+          <p className="text-xs font-medium tracking-[0.14em] uppercase text-yellow-ink mb-2">
+            {eyebrow}
+          </p>
+          <h3 className="text-xl font-semibold text-black">{name}</h3>
+        </div>
+      </div>
+      <div className="mb-6 max-w-2xl space-y-3">
+        {desc.map((p, i) => (
+          <p key={i} className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed">
+            {p}
+          </p>
+        ))}
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-[1fr_14rem] gap-8">
         <div>
@@ -180,9 +198,12 @@ const tabs: TabItem[] = [
       <div className="max-w-3xl">
         <div className="border-t border-black/10">
           <ProfileCard
+            photo="/team/nelly-garcia.jpg"
             eyebrow="Profesora asistente"
-            name="Nelly Paola García López"
-            desc="Investiga en la intersección de informática de la construcción, gerencia de proyectos y principios lean, con énfasis en cómo el modelado y la visualización pueden resolver problemas prácticos de entrega de proyectos de construcción. Hace parte del grupo IN2GECO del departamento."
+            name="Nelly García López"
+            desc={[
+              "Investiga en la intersección de informática de la construcción, gerencia de proyectos y principios lean, con énfasis en cómo el modelado y la visualización pueden resolver problemas prácticos de entrega de proyectos de construcción. Hace parte del grupo IN2GECO del departamento.",
+            ]}
             lines={[
               "Informática de la construcción y BIM (Building Information Modeling)",
               "Construcción industrializada y Construcción 4.0/5.0",
@@ -204,20 +225,25 @@ const tabs: TabItem[] = [
             ]}
           />
           <ProfileCard
+            photo="/team/juan-sebastian-hernandez.jpg"
             eyebrow="Profesor asistente"
             name="Juan Sebastián Hernández Suárez"
-            desc="Se unió al departamento para fortalecer el área de recursos hídricos, combinando hidrología con herramientas computacionales. Su investigación posdoctoral en Stanford abordó la modelación de mercados de derechos de agua en la cuenca alta del río Colorado."
+            desc={[
+              "Juan Sebastián es ingeniero civil con maestría en Ingeniería - Recursos Hidráulicos de la Universidad Nacional de Colombia, y doctor en Ingeniería de Biosistemas de Michigan State University. Recientemente fue investigador posdoctoral en la Universidad de Stanford, estudiando mercados de agua y sus efectos sobre la salud de los ecosistemas acuáticos. En Colombia ha trabajado con el Ministerio de Ambiente y Desarrollo Sostenible y la Autoridad Nacional de Licencias Ambientales en temas de caudales ambientales, regulación hídrica y gestión integral del agua.",
+              "Como profesor asistente de la Universidad de los Andes, continúa utilizando modelación numérica, inteligencia artificial, sistemas de información geográfica y métodos evolucionarios de optimización multiobjetivo para entender y simular sistemas humanos y naturales acoplados en un contexto de variabilidad y cambio climático — con el fin de asistir la toma de decisiones multicriterio, el diseño de infraestructura civil y la formulación de políticas públicas. Le interesan particularmente las dinámicas multisectoriales en la intersección entre seguridad hídrica, alimentaria y energética, infraestructura civil y biodiversidad.",
+              "Dirige los laboratorios de Geomática y de Hidráulica del departamento. Dicta Sistemas de Información Geográfica en pregrado, y modelación de sistemas y procesos hidrológicos, modelación de hidrosistemas y gestión de recursos hídricos en los programas de posgrado.",
+            ]}
             lines={[
               "Modelación hidrológica y de sistemas de recursos hídricos",
-              "Seguridad hídrica y flujos ambientales",
-              "Optimización multiobjetivo aplicada al agua",
-              "Modelación de mercados de derechos de agua",
+              "Seguridad hídrica, alimentaria y energética, e infraestructura civil",
+              "Optimización multiobjetivo e inteligencia artificial aplicadas al agua",
+              "Modelación de mercados de derechos de agua y sistemas de información geográfica",
             ]}
             facts={[
               { label: "Doctorado", value: "Michigan State University (Biosystems Eng.)" },
+              { label: "Posdoctorado", value: "Stanford University" },
               { label: "Maestría", value: "Universidad Nacional de Colombia" },
-              { label: "Pregrado", value: "Universidad Nacional de Colombia" },
-              { label: "Curso", value: "Modelación en Hidrología" },
+              { label: "Dirige", value: "Laboratorios de Geomática e Hidráulica" },
             ]}
             links={[
               {

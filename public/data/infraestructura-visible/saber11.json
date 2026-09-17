@@ -1,0 +1,292 @@
+[
+  {
+    "codigo": "05",
+    "estudiantes": 1741,
+    "puntGlobal": 249.3,
+    "puntLecturaCritica": 52.8,
+    "puntMatematicas": 49.5,
+    "puntCNaturales": 47.8,
+    "puntSociales": 48.1,
+    "puntIngles": 53.5
+  },
+  {
+    "codigo": "08",
+    "estudiantes": 775,
+    "puntGlobal": 314.4,
+    "puntLecturaCritica": 63.4,
+    "puntMatematicas": 63.5,
+    "puntCNaturales": 60.6,
+    "puntSociales": 60.5,
+    "puntIngles": 73.3
+  },
+  {
+    "codigo": "11",
+    "estudiantes": 5094,
+    "puntGlobal": 291.1,
+    "puntLecturaCritica": 59.3,
+    "puntMatematicas": 59.0,
+    "puntCNaturales": 56.3,
+    "puntSociales": 56.3,
+    "puntIngles": 64.1
+  },
+  {
+    "codigo": "13",
+    "estudiantes": 287,
+    "puntGlobal": 311.9,
+    "puntLecturaCritica": 63.0,
+    "puntMatematicas": 63.6,
+    "puntCNaturales": 60.2,
+    "puntSociales": 60.4,
+    "puntIngles": 69.5
+  },
+  {
+    "codigo": "15",
+    "estudiantes": 148,
+    "puntGlobal": 242.5,
+    "puntLecturaCritica": 51.2,
+    "puntMatematicas": 49.0,
+    "puntCNaturales": 47.1,
+    "puntSociales": 46.7,
+    "puntIngles": 48.4
+  },
+  {
+    "codigo": "17",
+    "estudiantes": 340,
+    "puntGlobal": 275.8,
+    "puntLecturaCritica": 56.4,
+    "puntMatematicas": 55.6,
+    "puntCNaturales": 54.0,
+    "puntSociales": 53.2,
+    "puntIngles": 59.5
+  },
+  {
+    "codigo": "18",
+    "estudiantes": 72,
+    "puntGlobal": 204.5,
+    "puntLecturaCritica": 43.9,
+    "puntMatematicas": 40.1,
+    "puntCNaturales": 40.4,
+    "puntSociales": 40.1,
+    "puntIngles": 38.5
+  },
+  {
+    "codigo": "19",
+    "estudiantes": 888,
+    "puntGlobal": 277.4,
+    "puntLecturaCritica": 57.3,
+    "puntMatematicas": 56.6,
+    "puntCNaturales": 54.8,
+    "puntSociales": 53.2,
+    "puntIngles": 55.6
+  },
+  {
+    "codigo": "20",
+    "estudiantes": 256,
+    "puntGlobal": 230.8,
+    "puntLecturaCritica": 49.4,
+    "puntMatematicas": 46.0,
+    "puntCNaturales": 44.4,
+    "puntSociales": 44.7,
+    "puntIngles": 46.2
+  },
+  {
+    "codigo": "23",
+    "estudiantes": 45,
+    "puntGlobal": 288.9,
+    "puntLecturaCritica": 58.4,
+    "puntMatematicas": 57.2,
+    "puntCNaturales": 56.3,
+    "puntSociales": 57.0,
+    "puntIngles": 64.8
+  },
+  {
+    "codigo": "25",
+    "estudiantes": 1407,
+    "puntGlobal": 283.7,
+    "puntLecturaCritica": 58.2,
+    "puntMatematicas": 57.3,
+    "puntCNaturales": 55.1,
+    "puntSociales": 54.7,
+    "puntIngles": 61.9
+  },
+  {
+    "codigo": "27",
+    "estudiantes": 15,
+    "puntGlobal": 190.6,
+    "puntLecturaCritica": 43.3,
+    "puntMatematicas": 37.1,
+    "puntCNaturales": 36.5,
+    "puntSociales": 36.7,
+    "puntIngles": 35.0
+  },
+  {
+    "codigo": "41",
+    "estudiantes": 193,
+    "puntGlobal": 222.9,
+    "puntLecturaCritica": 48.6,
+    "puntMatematicas": 44.0,
+    "puntCNaturales": 42.9,
+    "puntSociales": 43.0,
+    "puntIngles": 43.8
+  },
+  {
+    "codigo": "44",
+    "estudiantes": 51,
+    "puntGlobal": 293.2,
+    "puntLecturaCritica": 60.3,
+    "puntMatematicas": 58.7,
+    "puntCNaturales": 57.8,
+    "puntSociales": 55.1,
+    "puntIngles": 66.6
+  },
+  {
+    "codigo": "47",
+    "estudiantes": 123,
+    "puntGlobal": 298.0,
+    "puntLecturaCritica": 60.8,
+    "puntMatematicas": 59.7,
+    "puntCNaturales": 56.6,
+    "puntSociales": 57.8,
+    "puntIngles": 70.2
+  },
+  {
+    "codigo": "50",
+    "estudiantes": 228,
+    "puntGlobal": 208.3,
+    "puntLecturaCritica": 45.3,
+    "puntMatematicas": 41.6,
+    "puntCNaturales": 40.8,
+    "puntSociales": 39.8,
+    "puntIngles": 39.0
+  },
+  {
+    "codigo": "52",
+    "estudiantes": 798,
+    "puntGlobal": 265.7,
+    "puntLecturaCritica": 54.9,
+    "puntMatematicas": 54.1,
+    "puntCNaturales": 52.9,
+    "puntSociales": 50.5,
+    "puntIngles": 53.3
+  },
+  {
+    "codigo": "54",
+    "estudiantes": 175,
+    "puntGlobal": 220.5,
+    "puntLecturaCritica": 47.6,
+    "puntMatematicas": 44.2,
+    "puntCNaturales": 43.6,
+    "puntSociales": 41.3,
+    "puntIngles": 43.2
+  },
+  {
+    "codigo": "63",
+    "estudiantes": 51,
+    "puntGlobal": 302.7,
+    "puntLecturaCritica": 59.5,
+    "puntMatematicas": 61.6,
+    "puntCNaturales": 58.7,
+    "puntSociales": 59.0,
+    "puntIngles": 70.4
+  },
+  {
+    "codigo": "66",
+    "estudiantes": 279,
+    "puntGlobal": 284.9,
+    "puntLecturaCritica": 58.2,
+    "puntMatematicas": 57.4,
+    "puntCNaturales": 55.2,
+    "puntSociales": 55.2,
+    "puntIngles": 62.8
+  },
+  {
+    "codigo": "68",
+    "estudiantes": 414,
+    "puntGlobal": 273.9,
+    "puntLecturaCritica": 57.3,
+    "puntMatematicas": 55.6,
+    "puntCNaturales": 53.1,
+    "puntSociales": 52.3,
+    "puntIngles": 57.3
+  },
+  {
+    "codigo": "70",
+    "estudiantes": 27,
+    "puntGlobal": 214.1,
+    "puntLecturaCritica": 46.6,
+    "puntMatematicas": 40.1,
+    "puntCNaturales": 41.3,
+    "puntSociales": 43.4,
+    "puntIngles": 42.2
+  },
+  {
+    "codigo": "73",
+    "estudiantes": 138,
+    "puntGlobal": 218.2,
+    "puntLecturaCritica": 46.7,
+    "puntMatematicas": 43.8,
+    "puntCNaturales": 43.2,
+    "puntSociales": 41.7,
+    "puntIngles": 41.4
+  },
+  {
+    "codigo": "76",
+    "estudiantes": 7386,
+    "puntGlobal": 291.4,
+    "puntLecturaCritica": 59.7,
+    "puntMatematicas": 59.0,
+    "puntCNaturales": 57.1,
+    "puntSociales": 56.0,
+    "puntIngles": 62.1
+  },
+  {
+    "codigo": "81",
+    "estudiantes": 59,
+    "puntGlobal": 208.7,
+    "puntLecturaCritica": 45.8,
+    "puntMatematicas": 42.1,
+    "puntCNaturales": 39.5,
+    "puntSociales": 40.3,
+    "puntIngles": 39.4
+  },
+  {
+    "codigo": "85",
+    "estudiantes": 23,
+    "puntGlobal": 224.3,
+    "puntLecturaCritica": 49.1,
+    "puntMatematicas": 47.6,
+    "puntCNaturales": 42.0,
+    "puntSociales": 41.0,
+    "puntIngles": 44.1
+  },
+  {
+    "codigo": "86",
+    "estudiantes": 53,
+    "puntGlobal": 215.3,
+    "puntLecturaCritica": 47.3,
+    "puntMatematicas": 43.3,
+    "puntCNaturales": 42.0,
+    "puntSociales": 40.0,
+    "puntIngles": 41.9
+  },
+  {
+    "codigo": "94",
+    "estudiantes": 14,
+    "puntGlobal": 215.9,
+    "puntLecturaCritica": 46.3,
+    "puntMatematicas": 42.2,
+    "puntCNaturales": 41.7,
+    "puntSociales": 43.4,
+    "puntIngles": 40.7
+  },
+  {
+    "codigo": "95",
+    "estudiantes": 3,
+    "puntGlobal": 180.3,
+    "puntLecturaCritica": 37.7,
+    "puntMatematicas": 31.3,
+    "puntCNaturales": 38.0,
+    "puntSociales": 36.0,
+    "puntIngles": 40.3
+  }
+]

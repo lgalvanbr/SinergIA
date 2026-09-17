@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Building2, Waves, Scan } from "lucide-react";
+import { Map, Building2, Waves, Scan } from "lucide-react";
 import { easeApple } from "@/lib/motion";
 import { AmbianceStage, type ProjectTheme } from "./projects/AmbianceStage";
+import { InfraestructuraVisibleProject } from "./projects/InfraestructuraVisibleProject";
 import { CasaVibratoria } from "./projects/CasaVibratoria";
 import { GeodataRioSinu } from "./projects/GeodataRioSinu";
 import { CiamAR } from "./projects/CiamAR";
@@ -16,8 +17,20 @@ interface Project extends ProjectTheme {
 
 const projects: Project[] = [
   {
-    id: "casa-vibratoria",
+    id: "infraestructura-visible",
     index: "01",
+    eyebrow: "Modernización de infraestructura",
+    title: "Infraestructura Visible",
+    status: "Prototipo funcional",
+    teaser: "Mapas interactivos de infraestructura y datos socioeconómicos de Colombia, departamento por departamento.",
+    icon: Map,
+    glowPosition: "30% 40%",
+    iconPosition: "-right-14 -bottom-14 sm:-right-10 sm:-bottom-16",
+    content: <InfraestructuraVisibleProject />,
+  },
+  {
+    id: "casa-vibratoria",
+    index: "02",
     eyebrow: "Modernización de infraestructura",
     title: "Casa Vibratoria",
     status: "Prototipo funcional",
@@ -29,7 +42,7 @@ const projects: Project[] = [
   },
   {
     id: "geodata-rio-sinu",
-    index: "02",
+    index: "03",
     eyebrow: "Recursos y riesgo ambiental",
     title: "Geodata Río Sinú",
     status: "Prototipo funcional",
@@ -41,7 +54,7 @@ const projects: Project[] = [
   },
   {
     id: "ciamar",
-    index: "03",
+    index: "04",
     eyebrow: "Modernización de infraestructura",
     title: "ciamAR",
     status: "En desarrollo",
@@ -70,7 +83,7 @@ export function Proyectos() {
           </p>
         </div>
 
-        <div role="tablist" aria-label="Proyectos del laboratorio" className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+        <div role="tablist" aria-label="Proyectos del laboratorio" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
           {projects.map((p) => {
             const isActive = p.id === activeId;
             const Icon = p.icon;

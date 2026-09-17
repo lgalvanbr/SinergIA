@@ -1,0 +1,233 @@
+[
+  {
+    "codigo": "05",
+    "areaKm2": 63351.855546895,
+    "redPrimariaKm": 1615.4623494390578,
+    "redSecundariaKm": 5092.287601797586,
+    "densidadKm1000km2": 105.88087583750976
+  },
+  {
+    "codigo": "08",
+    "areaKm2": 3360.765349961,
+    "redPrimariaKm": 304.9460622571295,
+    "redSecundariaKm": 345.4155770669869,
+    "densidadKm1000km2": 193.51593211696957
+  },
+  {
+    "codigo": "11",
+    "areaKm2": 1650.947779134,
+    "redPrimariaKm": 19.690552828485583,
+    "redSecundariaKm": 17.29237835909817,
+    "densidadKm1000km2": 22.401030277882587
+  },
+  {
+    "codigo": "13",
+    "areaKm2": 26141.89452775,
+    "redPrimariaKm": 394.95606749406727,
+    "redSecundariaKm": 254.14972635963684,
+    "densidadKm1000km2": 24.83009764899284
+  },
+  {
+    "codigo": "15",
+    "areaKm2": 23352.582463939,
+    "redPrimariaKm": 1197.4451185611413,
+    "redSecundariaKm": 4101.942980708435,
+    "densidadKm1000km2": 226.92942450595683
+  },
+  {
+    "codigo": "17",
+    "areaKm2": 7558.199875556,
+    "redPrimariaKm": 359.73341804760673,
+    "redSecundariaKm": 2069.0718033213725,
+    "densidadKm1000km2": 321.3470484187626
+  },
+  {
+    "codigo": "18",
+    "areaKm2": 90180.868828821,
+    "redPrimariaKm": 491.46932159326497,
+    "redSecundariaKm": 690.3748603646667,
+    "densidadKm1000km2": 13.105264978110577
+  },
+  {
+    "codigo": "19",
+    "areaKm2": 29742.787301199,
+    "redPrimariaKm": 1484.8489871282366,
+    "redSecundariaKm": 1761.2800859426666,
+    "densidadKm1000km2": 109.14004259916972
+  },
+  {
+    "codigo": "20",
+    "areaKm2": 22973.095679788,
+    "redPrimariaKm": 846.35416394493,
+    "redSecundariaKm": 507.5672011652129,
+    "densidadKm1000km2": 58.93508580566871
+  },
+  {
+    "codigo": "23",
+    "areaKm2": 25059.485605512,
+    "redPrimariaKm": 584.5390718587607,
+    "redSecundariaKm": 636.7215438873574,
+    "densidadKm1000km2": 48.73446466425049
+  },
+  {
+    "codigo": "25",
+    "areaKm2": 22800.258637523,
+    "redPrimariaKm": 1215.1899593528258,
+    "redSecundariaKm": 2679.8567399047683,
+    "densidadKm1000km2": 170.83344365433692
+  },
+  {
+    "codigo": "27",
+    "areaKm2": 46838.52262987,
+    "redPrimariaKm": 262.3013677406599,
+    "redSecundariaKm": 120.8979727935196,
+    "densidadKm1000km2": 8.181285809595636
+  },
+  {
+    "codigo": "41",
+    "areaKm2": 20318.702519012,
+    "redPrimariaKm": 751.5771946091172,
+    "redSecundariaKm": 1671.4540282212376,
+    "densidadKm1000km2": 119.25127702239597
+  },
+  {
+    "codigo": "44",
+    "areaKm2": 21012.34966045,
+    "redPrimariaKm": 391.6625350791128,
+    "redSecundariaKm": 1264.1358132585488,
+    "densidadKm1000km2": 78.80119906124773
+  },
+  {
+    "codigo": "47",
+    "areaKm2": 22846.394629859,
+    "redPrimariaKm": 728.8923264311326,
+    "redSecundariaKm": 1119.5103563798564,
+    "densidadKm1000km2": 80.90566204241375
+  },
+  {
+    "codigo": "50",
+    "areaKm2": 85389.685783838,
+    "redPrimariaKm": 791.171180318024,
+    "redSecundariaKm": 1355.7335331896738,
+    "densidadKm1000km2": 25.142436042481027
+  },
+  {
+    "codigo": "52",
+    "areaKm2": 33283.045970747,
+    "redPrimariaKm": 768.0400415332313,
+    "redSecundariaKm": 1380.5187261237754,
+    "densidadKm1000km2": 64.55415076929586
+  },
+  {
+    "codigo": "54",
+    "areaKm2": 21443.330911239,
+    "redPrimariaKm": 725.2098600372567,
+    "redSecundariaKm": 1287.8280250508797,
+    "densidadKm1000km2": 93.87710768540401
+  },
+  {
+    "codigo": "63",
+    "areaKm2": 1732.025801293,
+    "redPrimariaKm": 109.9932039393623,
+    "redSecundariaKm": 361.2486285735837,
+    "densidadKm1000km2": 272.07552691256234
+  },
+  {
+    "codigo": "66",
+    "areaKm2": 4042.733125761,
+    "redPrimariaKm": 286.8711284784397,
+    "redSecundariaKm": 861.1769453093435,
+    "densidadKm1000km2": 283.9781994196503
+  },
+  {
+    "codigo": "68",
+    "areaKm2": 30290.221671891,
+    "redPrimariaKm": 1224.293268005686,
+    "redSecundariaKm": 2507.210264614673,
+    "densidadKm1000km2": 123.19168783380529
+  },
+  {
+    "codigo": "70",
+    "areaKm2": 10823.789104326,
+    "redPrimariaKm": 374.5194329106175,
+    "redSecundariaKm": 459.73353937204536,
+    "densidadKm1000km2": 77.07587095809475
+  },
+  {
+    "codigo": "73",
+    "areaKm2": 23421.273474061,
+    "redPrimariaKm": 650.0800880781024,
+    "redSecundariaKm": 1724.16917209923,
+    "densidadKm1000km2": 101.37148446717927
+  },
+  {
+    "codigo": "76",
+    "areaKm2": 22146.825343909,
+    "redPrimariaKm": 1051.4340669533203,
+    "redSecundariaKm": 2329.145924181899,
+    "densidadKm1000km2": 152.6439992477285
+  },
+  {
+    "codigo": "81",
+    "areaKm2": 24196.37986335,
+    "redPrimariaKm": 377.3426302265791,
+    "redSecundariaKm": 640.944583726101,
+    "densidadKm1000km2": 42.08427953700085
+  },
+  {
+    "codigo": "85",
+    "areaKm2": 44714.09497035,
+    "redPrimariaKm": 367.2611258260436,
+    "redSecundariaKm": 1014.6485149655294,
+    "densidadKm1000km2": 30.905459267551315
+  },
+  {
+    "codigo": "86",
+    "areaKm2": 24707.681631591,
+    "redPrimariaKm": 325.1984643029172,
+    "redSecundariaKm": 269.7073672520434,
+    "densidadKm1000km2": 24.077768219027067
+  },
+  {
+    "codigo": "91",
+    "areaKm2": 110029.418235446,
+    "redPrimariaKm": 19.31385261453549,
+    "redSecundariaKm": 32.855195753178016,
+    "densidadKm1000km2": 0.47413727350697954
+  },
+  {
+    "codigo": "94",
+    "areaKm2": 72111.49456128599,
+    "redPrimariaKm": 0.0,
+    "redSecundariaKm": 142.6488481721277,
+    "densidadKm1000km2": 1.9781707346377846
+  },
+  {
+    "codigo": "95",
+    "areaKm2": 55671.47668665,
+    "redPrimariaKm": 89.34106446105304,
+    "redSecundariaKm": 562.9376529722514,
+    "densidadKm1000km2": 11.71656935031006
+  },
+  {
+    "codigo": "97",
+    "areaKm2": 53087.83862698,
+    "redPrimariaKm": 0.0,
+    "redSecundariaKm": 81.53161118973345,
+    "densidadKm1000km2": 1.5357869767992007
+  },
+  {
+    "codigo": "99",
+    "areaKm2": 100055.282904151,
+    "redPrimariaKm": 95.35958011567531,
+    "redSecundariaKm": 1859.9174167198728,
+    "densidadKm1000km2": 19.541966601689847
+  },
+  {
+    "codigo": "88",
+    "areaKm2": 49.602521129,
+    "redPrimariaKm": 29.74202425943324,
+    "redSecundariaKm": 66.1565608522516,
+    "densidadKm1000km2": 1933.340945761282
+  }
+]

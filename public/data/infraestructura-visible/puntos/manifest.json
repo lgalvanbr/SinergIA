@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "reclusion",
+    "label": "Centros de reclusión",
+    "count": 71
+  },
+  {
+    "slug": "hospitales-publicos",
+    "label": "Hospitales públicos",
+    "count": 2323
+  },
+  {
+    "slug": "hospitales-privados",
+    "label": "Hospitales privados",
+    "count": 23963
+  },
+  {
+    "slug": "colegios",
+    "label": "Colegios",
+    "count": 23644
+  },
+  {
+    "slug": "bibliotecas",
+    "label": "Bibliotecas públicas",
+    "count": 1419
+  },
+  {
+    "slug": "universidades",
+    "label": "Universidades",
+    "count": 463
+  }
+]

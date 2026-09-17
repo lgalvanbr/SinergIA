@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Standalone output traces only the files each route actually needs into
+  // .next/standalone (including a minimal server.js and the subset of
+  // node_modules actually used) — lets the Docker image skip `npm install`
+  // in production and stay small, instead of shipping the full node_modules.
+  output: "standalone",
+
   // Files under /public keep their literal filename (no content hash), so
   // Next doesn't cache them aggressively by default — a fresh visitor would
   // otherwise re-validate every background video on every page load. These
@@ -11,6 +17,14 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/videos/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
+      {
+        source: "/documentos/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
+      {
+        source: "/data/:path*",
         headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
       },
     ];

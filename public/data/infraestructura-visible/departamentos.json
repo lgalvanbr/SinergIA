@@ -1,0 +1,167 @@
+[
+  {
+    "codigo": "05",
+    "nombre": "Antioquia",
+    "region": "Andina"
+  },
+  {
+    "codigo": "08",
+    "nombre": "Atlántico",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "11",
+    "nombre": "Bogotá",
+    "region": "Andina"
+  },
+  {
+    "codigo": "13",
+    "nombre": "Bolívar",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "15",
+    "nombre": "Boyacá",
+    "region": "Andina"
+  },
+  {
+    "codigo": "17",
+    "nombre": "Caldas",
+    "region": "Andina"
+  },
+  {
+    "codigo": "18",
+    "nombre": "Caquetá",
+    "region": "Amazónica"
+  },
+  {
+    "codigo": "19",
+    "nombre": "Cauca",
+    "region": "Pacífica"
+  },
+  {
+    "codigo": "20",
+    "nombre": "Cesar",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "23",
+    "nombre": "Córdoba",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "25",
+    "nombre": "Cundinamarca",
+    "region": "Andina"
+  },
+  {
+    "codigo": "27",
+    "nombre": "Chocó",
+    "region": "Pacífica"
+  },
+  {
+    "codigo": "41",
+    "nombre": "Huila",
+    "region": "Andina"
+  },
+  {
+    "codigo": "44",
+    "nombre": "La Guajira",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "47",
+    "nombre": "Magdalena",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "50",
+    "nombre": "Meta",
+    "region": "Orinoquía"
+  },
+  {
+    "codigo": "52",
+    "nombre": "Nariño",
+    "region": "Pacífica"
+  },
+  {
+    "codigo": "54",
+    "nombre": "Norte de Santander",
+    "region": "Andina"
+  },
+  {
+    "codigo": "63",
+    "nombre": "Quindío",
+    "region": "Andina"
+  },
+  {
+    "codigo": "66",
+    "nombre": "Risaralda",
+    "region": "Andina"
+  },
+  {
+    "codigo": "68",
+    "nombre": "Santander",
+    "region": "Andina"
+  },
+  {
+    "codigo": "70",
+    "nombre": "Sucre",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "73",
+    "nombre": "Tolima",
+    "region": "Andina"
+  },
+  {
+    "codigo": "76",
+    "nombre": "Valle del Cauca",
+    "region": "Pacífica"
+  },
+  {
+    "codigo": "81",
+    "nombre": "Arauca",
+    "region": "Orinoquía"
+  },
+  {
+    "codigo": "85",
+    "nombre": "Casanare",
+    "region": "Orinoquía"
+  },
+  {
+    "codigo": "86",
+    "nombre": "Putumayo",
+    "region": "Amazónica"
+  },
+  {
+    "codigo": "88",
+    "nombre": "San Andrés e Islas",
+    "region": "Caribe"
+  },
+  {
+    "codigo": "91",
+    "nombre": "Amazonas",
+    "region": "Amazónica"
+  },
+  {
+    "codigo": "94",
+    "nombre": "Guainía",
+    "region": "Amazónica"
+  },
+  {
+    "codigo": "95",
+    "nombre": "Guaviare",
+    "region": "Amazónica"
+  },
+  {
+    "codigo": "97",
+    "nombre": "Vaupés",
+    "region": "Amazónica"
+  },
+  {
+    "codigo": "99",
+    "nombre": "Vichada",
+    "region": "Orinoquía"
+  }
+]

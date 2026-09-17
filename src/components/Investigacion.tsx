@@ -12,7 +12,7 @@ const lines = [
     title: "Modernización de infraestructura",
     desc: "Informática de la construcción, BIM y construcción industrializada aplicadas a la entrega y el mantenimiento de proyectos de infraestructura — monitoreo, mantenimiento predictivo y gemelos digitales para extender la vida útil segura de puentes, vías y edificaciones.",
     researcher: {
-      name: "Nelly Paola García López",
+      name: "Nelly García López",
       note: "Profesora asistente · grupo IN2GECO — informática de la construcción, BIM y lean construction.",
     },
   },

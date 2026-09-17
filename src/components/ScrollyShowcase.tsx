@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "motion/react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Boxes, Droplets, type LucideIcon } from "lucide-react";
 
 /**
  * Apple-style "film" section: a tall container pins a fullscreen video while
@@ -21,9 +21,15 @@ interface ChapterProps {
   desc: string;
   videoSrc: string;
   posterSrc: string;
+  /** Fallback motif (grid + glow + icon watermark, same language as
+   * AmbianceStage) shown behind the poster/video — visible only until the
+   * real clip lands, since a real poster image paints over it. Optional so
+   * the two already-shipped chapters (which already have real footage)
+   * don't need it. */
+  fallbackIcon?: LucideIcon;
 }
 
-function ScrollChapter({ id, index, eyebrow, title, desc, videoSrc, posterSrc }: ChapterProps) {
+function ScrollChapter({ id, index, eyebrow, title, desc, videoSrc, posterSrc, fallbackIcon: FallbackIcon }: ChapterProps) {
   const shouldReduceMotion = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
   const [nearView, setNearView] = useState(false);
@@ -62,6 +68,30 @@ function ScrollChapter({ id, index, eyebrow, title, desc, videoSrc, posterSrc }:
         className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden"
         style={{ touchAction: "pan-y" }}
       >
+        {FallbackIcon && (
+          <div className="absolute inset-0">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
+                backgroundSize: "34px 34px",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  "radial-gradient(560px circle at 65% 35%, rgba(255,222,0,0.14), transparent 65%)",
+              }}
+            />
+            <FallbackIcon
+              strokeWidth={0.6}
+              className="absolute -right-14 -bottom-14 sm:-right-6 sm:-bottom-10 w-72 h-72 sm:w-96 sm:h-96 text-white/[0.07] pointer-events-none"
+            />
+          </div>
+        )}
+
         {/* Poster layer — instant paint, and the permanent fallback if the
             video errors or reduced-motion keeps it paused on frame one. */}
         <div
@@ -146,6 +176,53 @@ export function ScrollyShowcase() {
         desc="Sensores, modelos predictivos y gemelos digitales para dar seguimiento al estado de puentes, vías y edificaciones, y priorizar su mantenimiento."
         videoSrc="/videos/scroll-infraestructura.mp4"
         posterSrc="/videos/scroll-infraestructura-poster.jpg"
+      />
+
+      <div className="bg-white py-24 sm:py-32 px-6 text-center">
+        <div className="max-w-3xl mx-auto space-y-5">
+          <span className="text-xs font-semibold uppercase tracking-wider text-yellow-ink">03 — A continuación</span>
+          <h3 className="text-3xl sm:text-5xl font-semibold text-black tracking-tight text-balance">
+            Del monitoreo a la gestión del ciclo de vida completo
+          </h3>
+          <p className="text-base sm:text-lg text-foreground-secondary max-w-xl mx-auto">
+            BIM, gemelos digitales y construcción industrializada, desde la planificación hasta la
+            operación de un proyecto.
+          </p>
+        </div>
+      </div>
+
+      <ScrollChapter
+        id="gestion-infraestructura"
+        index="03"
+        eyebrow="Gestión inteligente de infraestructura"
+        title="BIM y gemelos digitales para todo el ciclo de vida"
+        desc="BIM, gemelos digitales, IA y construcción industrializada aplicados a la planificación, entrega, operación y gestión del ciclo de vida de infraestructura y edificaciones."
+        videoSrc="/videos/scroll-gestion-infraestructura.mp4"
+        posterSrc="/videos/scroll-gestion-infraestructura-poster.jpg"
+        fallbackIcon={Boxes}
+      />
+
+      <div className="bg-white py-24 sm:py-32 px-6 text-center">
+        <div className="max-w-3xl mx-auto space-y-5">
+          <span className="text-xs font-semibold uppercase tracking-wider text-yellow-ink">04 — A continuación</span>
+          <h3 className="text-3xl sm:text-5xl font-semibold text-black tracking-tight text-balance">
+            Del territorio construido a sus recursos naturales
+          </h3>
+          <p className="text-base sm:text-lg text-foreground-secondary max-w-xl mx-auto">
+            Agua, energía y riesgo ambiental, modelados para una mayor resiliencia territorial.
+          </p>
+        </div>
+      </div>
+
+      <ScrollChapter
+        id="recursos-ambientales"
+        index="04"
+        eyebrow="Recursos y riesgo ambiental"
+        title="Modelación hídrica para la resiliencia territorial"
+        desc="Modelación hidrológica y de sistemas de recursos hídricos aplicada a la gestión de agua, energía y riesgo ambiental, en apoyo a la resiliencia territorial."
+        videoSrc="/videos/scroll-recursos-ambientales.mp4"
+        posterSrc="/videos/scroll-recursos-ambientales-poster.jpg"
+        fallbackIcon={Droplets}
       />
     </section>
   );

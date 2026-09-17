@@ -1,0 +1,233 @@
+[
+  {
+    "codigo": "91",
+    "capacidad": 118,
+    "poblacion": 203,
+    "hacinamiento": 85,
+    "porcentajeHacinamiento": 0.72
+  },
+  {
+    "codigo": "05",
+    "capacidad": 7330,
+    "poblacion": 13869,
+    "hacinamiento": 6539,
+    "porcentajeHacinamiento": 0.892
+  },
+  {
+    "codigo": "81",
+    "capacidad": 212,
+    "poblacion": 479,
+    "hacinamiento": 267,
+    "porcentajeHacinamiento": 1.259
+  },
+  {
+    "codigo": "08",
+    "capacidad": 1144,
+    "poblacion": 2770,
+    "hacinamiento": 1626,
+    "porcentajeHacinamiento": 1.421
+  },
+  {
+    "codigo": "11",
+    "capacidad": 10358,
+    "poblacion": 16456,
+    "hacinamiento": 6098,
+    "porcentajeHacinamiento": 0.589
+  },
+  {
+    "codigo": "13",
+    "capacidad": 1458,
+    "poblacion": 2836,
+    "hacinamiento": 1378,
+    "porcentajeHacinamiento": 0.945
+  },
+  {
+    "codigo": "15",
+    "capacidad": 4551,
+    "poblacion": 6931,
+    "hacinamiento": 2380,
+    "porcentajeHacinamiento": 0.523
+  },
+  {
+    "codigo": "17",
+    "capacidad": 2851,
+    "poblacion": 4119,
+    "hacinamiento": 1268,
+    "porcentajeHacinamiento": 0.445
+  },
+  {
+    "codigo": "18",
+    "capacidad": 1938,
+    "poblacion": 2399,
+    "hacinamiento": 461,
+    "porcentajeHacinamiento": 0.238
+  },
+  {
+    "codigo": "85",
+    "capacidad": 1038,
+    "poblacion": 1467,
+    "hacinamiento": 429,
+    "porcentajeHacinamiento": 0.413
+  },
+  {
+    "codigo": "19",
+    "capacidad": 3312,
+    "poblacion": 3943,
+    "hacinamiento": 631,
+    "porcentajeHacinamiento": 0.191
+  },
+  {
+    "codigo": "20",
+    "capacidad": 1958,
+    "poblacion": 2647,
+    "hacinamiento": 689,
+    "porcentajeHacinamiento": 0.352
+  },
+  {
+    "codigo": "27",
+    "capacidad": 367,
+    "poblacion": 785,
+    "hacinamiento": 418,
+    "porcentajeHacinamiento": 1.139
+  },
+  {
+    "codigo": "23",
+    "capacidad": 2088,
+    "poblacion": 2784,
+    "hacinamiento": 696,
+    "porcentajeHacinamiento": 0.333
+  },
+  {
+    "codigo": "25",
+    "capacidad": 4307,
+    "poblacion": 5094,
+    "hacinamiento": 787,
+    "porcentajeHacinamiento": 0.183
+  },
+  {
+    "codigo": "94",
+    "capacidad": 0,
+    "poblacion": 0,
+    "hacinamiento": 0,
+    "porcentajeHacinamiento": 0.0
+  },
+  {
+    "codigo": "95",
+    "capacidad": 0,
+    "poblacion": 0,
+    "hacinamiento": 0,
+    "porcentajeHacinamiento": 0.0
+  },
+  {
+    "codigo": "41",
+    "capacidad": 2195,
+    "poblacion": 4026,
+    "hacinamiento": 1831,
+    "porcentajeHacinamiento": 0.834
+  },
+  {
+    "codigo": "44",
+    "capacidad": 100,
+    "poblacion": 443,
+    "hacinamiento": 343,
+    "porcentajeHacinamiento": 3.43
+  },
+  {
+    "codigo": "47",
+    "capacidad": 392,
+    "poblacion": 1496,
+    "hacinamiento": 1104,
+    "porcentajeHacinamiento": 2.816
+  },
+  {
+    "codigo": "50",
+    "capacidad": 4607,
+    "poblacion": 6539,
+    "hacinamiento": 1932,
+    "porcentajeHacinamiento": 0.419
+  },
+  {
+    "codigo": "52",
+    "capacidad": 1296,
+    "poblacion": 2742,
+    "hacinamiento": 1446,
+    "porcentajeHacinamiento": 1.116
+  },
+  {
+    "codigo": "54",
+    "capacidad": 3129,
+    "poblacion": 4810,
+    "hacinamiento": 1681,
+    "porcentajeHacinamiento": 0.537
+  },
+  {
+    "codigo": "86",
+    "capacidad": 0,
+    "poblacion": 0,
+    "hacinamiento": 0,
+    "porcentajeHacinamiento": 0.0
+  },
+  {
+    "codigo": "63",
+    "capacidad": 1486,
+    "poblacion": 1669,
+    "hacinamiento": 183,
+    "porcentajeHacinamiento": 0.123
+  },
+  {
+    "codigo": "66",
+    "capacidad": 1159,
+    "poblacion": 1903,
+    "hacinamiento": 744,
+    "porcentajeHacinamiento": 0.642
+  },
+  {
+    "codigo": "88",
+    "capacidad": 136,
+    "poblacion": 245,
+    "hacinamiento": 109,
+    "porcentajeHacinamiento": 0.802
+  },
+  {
+    "codigo": "68",
+    "capacidad": 4469,
+    "poblacion": 6933,
+    "hacinamiento": 2464,
+    "porcentajeHacinamiento": 0.551
+  },
+  {
+    "codigo": "70",
+    "capacidad": 557,
+    "poblacion": 875,
+    "hacinamiento": 318,
+    "porcentajeHacinamiento": 0.571
+  },
+  {
+    "codigo": "73",
+    "capacidad": 7201,
+    "poblacion": 7697,
+    "hacinamiento": 496,
+    "porcentajeHacinamiento": 0.069
+  },
+  {
+    "codigo": "76",
+    "capacidad": 10707,
+    "poblacion": 17558,
+    "hacinamiento": 6851,
+    "porcentajeHacinamiento": 0.64
+  },
+  {
+    "codigo": "97",
+    "capacidad": 0,
+    "poblacion": 0,
+    "hacinamiento": 0,
+    "porcentajeHacinamiento": 0.0
+  },
+  {
+    "codigo": "99",
+    "capacidad": 0,
+    "poblacion": 0,
+    "hacinamiento": 0,
+    "porcentajeHacinamiento": 0.0
+  }
+]

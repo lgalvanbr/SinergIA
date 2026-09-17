@@ -1,0 +1,200 @@
+[
+  {
+    "codigo": "05",
+    "total": 17.1,
+    "cabeceras": 11.8,
+    "ruralDisperso": 36.8
+  },
+  {
+    "codigo": "08",
+    "total": 20.1,
+    "cabeceras": 19.0,
+    "ruralDisperso": 43.9
+  },
+  {
+    "codigo": "11",
+    "total": 4.4,
+    "cabeceras": 4.3,
+    "ruralDisperso": 19.2
+  },
+  {
+    "codigo": "13",
+    "total": 32.4,
+    "cabeceras": 26.3,
+    "ruralDisperso": 53.9
+  },
+  {
+    "codigo": "15",
+    "total": 16.6,
+    "cabeceras": 8.9,
+    "ruralDisperso": 27.4
+  },
+  {
+    "codigo": "17",
+    "total": 15.3,
+    "cabeceras": 10.7,
+    "ruralDisperso": 27.4
+  },
+  {
+    "codigo": "18",
+    "total": 28.7,
+    "cabeceras": 21.3,
+    "ruralDisperso": 40.0
+  },
+  {
+    "codigo": "19",
+    "total": 28.7,
+    "cabeceras": 13.4,
+    "ruralDisperso": 39.0
+  },
+  {
+    "codigo": "20",
+    "total": 33.2,
+    "cabeceras": 26.7,
+    "ruralDisperso": 53.5
+  },
+  {
+    "codigo": "23",
+    "total": 36.7,
+    "cabeceras": 23.3,
+    "ruralDisperso": 51.9
+  },
+  {
+    "codigo": "25",
+    "total": 11.5,
+    "cabeceras": 7.7,
+    "ruralDisperso": 19.8
+  },
+  {
+    "codigo": "27",
+    "total": 45.1,
+    "cabeceras": 29.9,
+    "ruralDisperso": 59.6
+  },
+  {
+    "codigo": "41",
+    "total": 19.2,
+    "cabeceras": 12.2,
+    "ruralDisperso": 29.5
+  },
+  {
+    "codigo": "44",
+    "total": 51.4,
+    "cabeceras": 34.1,
+    "ruralDisperso": 72.5
+  },
+  {
+    "codigo": "47",
+    "total": 38.6,
+    "cabeceras": 33.2,
+    "ruralDisperso": 54.4
+  },
+  {
+    "codigo": "50",
+    "total": 15.6,
+    "cabeceras": 10.7,
+    "ruralDisperso": 31.6
+  },
+  {
+    "codigo": "52",
+    "total": 33.5,
+    "cabeceras": 23.4,
+    "ruralDisperso": 43.7
+  },
+  {
+    "codigo": "54",
+    "total": 31.5,
+    "cabeceras": 27.2,
+    "ruralDisperso": 47.7
+  },
+  {
+    "codigo": "63",
+    "total": 16.2,
+    "cabeceras": 15.0,
+    "ruralDisperso": 25.7
+  },
+  {
+    "codigo": "66",
+    "total": 12.5,
+    "cabeceras": 7.3,
+    "ruralDisperso": 31.6
+  },
+  {
+    "codigo": "68",
+    "total": 12.9,
+    "cabeceras": 8.3,
+    "ruralDisperso": 27.7
+  },
+  {
+    "codigo": "70",
+    "total": 39.7,
+    "cabeceras": 30.9,
+    "ruralDisperso": 58.5
+  },
+  {
+    "codigo": "73",
+    "total": 23.5,
+    "cabeceras": 12.6,
+    "ruralDisperso": 47.8
+  },
+  {
+    "codigo": "76",
+    "total": 13.6,
+    "cabeceras": 12.3,
+    "ruralDisperso": 22.3
+  },
+  {
+    "codigo": "81",
+    "total": 31.8,
+    "cabeceras": 29.3,
+    "ruralDisperso": 36.3
+  },
+  {
+    "codigo": "85",
+    "total": 19.1,
+    "cabeceras": 14.8,
+    "ruralDisperso": 31.9
+  },
+  {
+    "codigo": "86",
+    "total": 25.1,
+    "cabeceras": 19.2,
+    "ruralDisperso": 31.0
+  },
+  {
+    "codigo": "88",
+    "total": 8.9,
+    "cabeceras": 8.9,
+    "ruralDisperso": null
+  },
+  {
+    "codigo": "91",
+    "total": 34.9,
+    "cabeceras": 25.1,
+    "ruralDisperso": 40.1
+  },
+  {
+    "codigo": "94",
+    "total": 65.0,
+    "cabeceras": 46.9,
+    "ruralDisperso": 72.7
+  },
+  {
+    "codigo": "95",
+    "total": 33.5,
+    "cabeceras": 27.3,
+    "ruralDisperso": 42.9
+  },
+  {
+    "codigo": "97",
+    "total": 59.4,
+    "cabeceras": 28.2,
+    "ruralDisperso": 78.8
+  },
+  {
+    "codigo": "99",
+    "total": 55.0,
+    "cabeceras": 39.7,
+    "ruralDisperso": 67.3
+  }
+]
