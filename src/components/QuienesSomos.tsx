@@ -57,6 +57,19 @@ const researchGroups = [
     url: "https://sur.uniandes.edu.co/",
     logo: null,
   },
+  {
+    acronym: "COLIVRI",
+    name: "Colaboratorio de Interacción, Visualización, Robótica y Sistemas Autónomos",
+    desc: "Espacio colaborativo interdepartamental para realidad virtual y aumentada, interfaces humano-máquina, procesamiento de imágenes y robótica — 250 m² de equipos de conectividad, cómputo, visualización, robótica e interacción.",
+    url: "https://colivri.uniandes.edu.co/",
+    logo: null,
+  },
+  {
+    acronym: "GeoIngenIA",
+    name: "Geomática e IA en Sistemas Ambientales y de Infraestructura Sostenible",
+    desc: "Grupo de investigación que aplica geomática e inteligencia artificial al análisis de sistemas ambientales y de infraestructura — percepción remota, datos geoespaciales y modelos de IA para entender y gestionar el territorio.",
+    logo: "/logos-grupos/geoingenia.png",
+  },
 ];
 
 const physicalLabs = [
@@ -164,6 +177,29 @@ const team: TeamMember[] = [
       { label: "GitHub", href: "https://github.com/lgalvanbr" },
     ],
   },
+  {
+    id: "juan-sebastian-geoingenia",
+    photo: "/team/colega-geoingenia.jpg",
+    eyebrow: "Asistente graduado de investigación",
+    name: "Juan Sebastián Rodríguez",
+    desc: [
+      "Ingeniero electrónico con conocimientos y experiencia en ingeniería de sistemas, automatización industrial, inteligencia artificial y ciencia de datos. Su experiencia integra el desarrollo de soluciones tecnológicas, incluyendo construcción y gestión de bases de datos, desarrollo de aplicaciones web y análisis de información, utilizando tecnologías como HTML, Python y herramientas de procesamiento de datos.",
+      "Actualmente desarrolla investigación en áreas relacionadas con inteligencia artificial, Deep Learning, análisis de datos e integración de tecnologías de captura y análisis espacial, incluyendo el uso de sensores LiDAR e información geoespacial para el desarrollo de soluciones aplicadas a la ingeniería.",
+    ],
+    lines: [
+      "Inteligencia artificial y Deep Learning",
+      "Ciencia de datos y análisis de información",
+      "Automatización industrial e ingeniería de sistemas",
+      "Captura y análisis espacial: sensores LiDAR e información geoespacial",
+    ],
+    facts: [
+      { label: "Maestría", value: "Ingeniería de la Información — Uniandes" },
+      { label: "Pregrado", value: "Ing. Electrónica — U. Santo Tomás, Tunja" },
+      { label: "Grupo de investigación", value: "GeoIngenIA" },
+      { label: "Conocimientos", value: "Bases de datos · Desarrollo web · Python" },
+    ],
+    links: [],
+  },
 ];
 
 /**
@@ -261,60 +297,32 @@ function TeamShowcase() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-x-6 gap-y-2 pt-6 mt-6 border-t border-black/10">
-          {active.links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-              className="inline-flex items-center gap-1.5 text-[15px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
-            >
-              {link.href.startsWith("mailto:") ? (
-                <Mail className="w-4 h-4" />
-              ) : (
-                <ExternalLink className="w-4 h-4" />
-              )}
-              {link.label}
-            </a>
-          ))}
-        </div>
+        {active.links.length > 0 && (
+          <div className="flex flex-wrap gap-x-6 gap-y-2 pt-6 mt-6 border-t border-black/10">
+            {active.links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                className="inline-flex items-center gap-1.5 text-[15px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
+              >
+                {link.href.startsWith("mailto:") ? (
+                  <Mail className="w-4 h-4" />
+                ) : (
+                  <ExternalLink className="w-4 h-4" />
+                )}
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
       </motion.div>
     </div>
   );
 }
 
 const tabs: TabItem[] = [
-  {
-    id: "mision-vision",
-    label: "Misión y visión",
-    content: (
-      <div className="max-w-2xl space-y-8 text-[15px] sm:text-base text-foreground-secondary leading-relaxed">
-        <div>
-          <p className="text-xs font-medium tracking-[0.14em] uppercase text-yellow-ink mb-3">
-            Misión
-          </p>
-          <p>
-            Desarrollar y aplicar inteligencia artificial para apoyar decisiones más sostenibles en
-            ciudades e infraestructura, en estrecha colaboración con la ingeniería civil y
-            ambiental. Partimos de problemas reales del territorio — no de la tecnología por sí
-            misma — y construimos modelos y herramientas que un tomador de decisiones pueda usar.
-          </p>
-        </div>
-        <div>
-          <p className="text-xs font-medium tracking-[0.14em] uppercase text-yellow-ink mb-3">
-            Visión
-          </p>
-          <p>
-            Ser un referente en investigación aplicada que conecta la inteligencia artificial con
-            los retos reales de la modernización urbana y la sostenibilidad territorial en la
-            región. Queremos que la Universidad de los Andes sea un punto de encuentro entre la
-            academia, el sector público y el privado alrededor de estos temas.
-          </p>
-        </div>
-      </div>
-    ),
-  },
   {
     id: "equipo",
     label: "Equipo",
@@ -373,19 +381,26 @@ const tabs: TabItem[] = [
                 <dt className="text-base font-semibold text-black">{g.acronym}</dt>
               </div>
               <dd className="text-[15px] text-foreground-secondary leading-relaxed">
-                <span className="text-black">{g.name}.</span> {g.desc}{" "}
-                <span className="text-foreground-secondary/80">Dirige {g.director}.</span>
-                <div className="mt-2">
-                  <a
-                    href={g.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                    Sitio web
-                  </a>
-                </div>
+                <span className="text-black">{g.name}.</span> {g.desc}
+                {g.director && (
+                  <>
+                    {" "}
+                    <span className="text-foreground-secondary/80">Dirige {g.director}.</span>
+                  </>
+                )}
+                {g.url && (
+                  <div className="mt-2">
+                    <a
+                      href={g.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      Sitio web
+                    </a>
+                  </div>
+                )}
               </dd>
             </div>
           ))}
@@ -445,6 +460,31 @@ export function QuienesSomos() {
             la inteligencia artificial como herramienta para ciudades más sostenibles y una
             infraestructura mejor gestionada.
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 pb-16 mb-16 border-b border-black/10">
+          <div>
+            <p className="text-xs font-medium tracking-[0.14em] uppercase text-yellow-ink mb-3">
+              Misión
+            </p>
+            <p className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed">
+              Desarrollar y aplicar inteligencia artificial para apoyar decisiones más sostenibles
+              en ciudades e infraestructura, en estrecha colaboración con la ingeniería civil y
+              ambiental. Partimos de problemas reales del territorio — no de la tecnología por sí
+              misma — y construimos modelos y herramientas que un tomador de decisiones pueda usar.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-medium tracking-[0.14em] uppercase text-yellow-ink mb-3">
+              Visión
+            </p>
+            <p className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed">
+              Ser un referente en investigación aplicada que conecta la inteligencia artificial con
+              los retos reales de la modernización urbana y la sostenibilidad territorial en la
+              región. Queremos que la Universidad de los Andes sea un punto de encuentro entre la
+              academia, el sector público y el privado alrededor de estos temas.
+            </p>
+          </div>
         </div>
 
         <Tabs items={tabs} groupId="quienes-somos" label="Secciones de quiénes somos" />

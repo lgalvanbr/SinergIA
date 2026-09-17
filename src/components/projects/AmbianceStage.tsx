@@ -20,6 +20,9 @@ export interface ProjectTheme {
    * when absent, same pattern as Hero/ScrollyShowcase. */
   mediaSrc?: string;
   posterSrc?: string;
+  /** Optional static image, for a project with real photography/art but no
+   * video yet. Ignored when `mediaSrc` is also set (video wins). */
+  imageSrc?: string;
 }
 
 /**
@@ -57,6 +60,13 @@ export function AmbianceStage({ project }: { project: ProjectTheme }) {
             >
               <source src={project.mediaSrc} type="video/mp4" />
             </video>
+          ) : project.imageSrc ? (
+            // eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used elsewhere on this site for non-optimized real assets
+            <img
+              src={project.imageSrc}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           ) : (
             <>
               <div

@@ -24,7 +24,7 @@ export const labZones: LabZone[] = [
     id: "instrumentacion",
     label: "Banco de instrumentación y sensores",
     description:
-      "Montaje de ensayos físicos instrumentados — como la mesa vibratoria del proyecto Casa Vibratoria — con adquisición de datos en tiempo real.",
+      "Montaje de ensayos físicos instrumentados — como el proyecto Mesa Vibratoria — con adquisición de datos en tiempo real.",
     accent: "#ffde00",
   },
   {

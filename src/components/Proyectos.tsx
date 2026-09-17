@@ -6,7 +6,7 @@ import { Map, Building2, Waves, Scan } from "lucide-react";
 import { easeApple } from "@/lib/motion";
 import { AmbianceStage, type ProjectTheme } from "./projects/AmbianceStage";
 import { InfraestructuraVisibleProject } from "./projects/InfraestructuraVisibleProject";
-import { CasaVibratoria } from "./projects/CasaVibratoria";
+import { MesaVibratoria } from "./projects/MesaVibratoria";
 import { GeodataRioSinu } from "./projects/GeodataRioSinu";
 import { CiamAR } from "./projects/CiamAR";
 
@@ -26,19 +26,22 @@ const projects: Project[] = [
     icon: Map,
     glowPosition: "30% 40%",
     iconPosition: "-right-14 -bottom-14 sm:-right-10 sm:-bottom-16",
+    imageSrc: "/projects/infraestructura-visible-poster.jpg",
     content: <InfraestructuraVisibleProject />,
   },
   {
-    id: "casa-vibratoria",
+    id: "mesa-vibratoria",
     index: "02",
     eyebrow: "Modernización de infraestructura",
-    title: "Casa Vibratoria",
+    title: "Mesa Vibratoria",
     status: "Prototipo funcional",
     teaser: "Sensores en una casa a escala, sacudida en la mesa vibratoria del CIAM.",
     icon: Building2,
     glowPosition: "25% 75%",
     iconPosition: "-right-12 -bottom-16 sm:-right-8 sm:-bottom-20",
-    content: <CasaVibratoria />,
+    mediaSrc: "/projects/mesa-vibratoria.mp4",
+    posterSrc: "/projects/mesa-vibratoria-poster.jpg",
+    content: <MesaVibratoria />,
   },
   {
     id: "geodata-rio-sinu",

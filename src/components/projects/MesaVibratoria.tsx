@@ -8,7 +8,7 @@ const features = [
 
 const stack = ["Python / Flask", "LabVIEW", "Three.js / WebGL", "GLTF", "Vercel", "Render"];
 
-export function CasaVibratoria() {
+export function MesaVibratoria() {
   return (
     <div>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-2">
@@ -18,7 +18,7 @@ export function CasaVibratoria() {
         <span className="text-sm font-medium text-black">Prototipo funcional</span>
       </div>
 
-      <h3 className="text-2xl font-semibold text-black mt-1 mb-4">Casa Vibratoria</h3>
+      <h3 className="text-2xl font-semibold text-black mt-1 mb-4">Mesa Vibratoria</h3>
 
       <p className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed max-w-2xl mb-8">
         Modelo a escala de una casa de dos pisos, instrumentado con sensores y sometido a ensayos
