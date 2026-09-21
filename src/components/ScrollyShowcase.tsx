@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "motion/react";
+import { useVideoWhenVisible } from "@/lib/useVideoWhenVisible";
 import { ChevronDown, Boxes, Droplets, type LucideIcon } from "lucide-react";
 
 /**
@@ -35,6 +36,8 @@ function ScrollChapter({ id, index, eyebrow, title, desc, videoSrc, posterSrc, f
   const [nearView, setNearView] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
   const [videoAvailable, setVideoAvailable] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useVideoWhenVisible(containerRef, videoRef, nearView && videoAvailable && !shouldReduceMotion);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -101,6 +104,7 @@ function ScrollChapter({ id, index, eyebrow, title, desc, videoSrc, posterSrc, f
 
         {nearView && videoAvailable && (
           <video
+            ref={videoRef}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               videoReady ? "opacity-100" : "opacity-0"
             }`}
@@ -108,7 +112,7 @@ function ScrollChapter({ id, index, eyebrow, title, desc, videoSrc, posterSrc, f
             loop
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={posterSrc}
             onCanPlay={() => setVideoReady(true)}
             onError={() => setVideoAvailable(false)}
@@ -151,8 +155,8 @@ export function ScrollyShowcase() {
         eyebrow="Ciudades y territorio"
         title="Planeación urbana guiada por datos"
         desc="Modelos de IA aplicados a la lectura del territorio — densificación, movilidad, energía y calidad ambiental — para apoyar decisiones urbanas más sostenibles."
-        videoSrc="/videos/scroll-ciudades.mp4"
-        posterSrc="/videos/scroll-ciudades-poster.jpg"
+        videoSrc="/videos/scroll-ciudades.0706539b.mp4"
+        posterSrc="/videos/scroll-ciudades-poster.6715b743.jpg"
       />
 
       <div className="bg-white py-24 sm:py-32 px-6 text-center">
@@ -174,8 +178,8 @@ export function ScrollyShowcase() {
         eyebrow="Infraestructura y monitoreo"
         title="Modernización y monitoreo inteligente de infraestructura"
         desc="Sensores, modelos predictivos y gemelos digitales para dar seguimiento al estado de puentes, vías y edificaciones, y priorizar su mantenimiento."
-        videoSrc="/videos/scroll-infraestructura.mp4"
-        posterSrc="/videos/scroll-infraestructura-poster.jpg"
+        videoSrc="/videos/scroll-infraestructura.7c006242.mp4"
+        posterSrc="/videos/scroll-infraestructura-poster.4cb105e9.jpg"
       />
 
       <div className="bg-white py-24 sm:py-32 px-6 text-center">
@@ -197,8 +201,8 @@ export function ScrollyShowcase() {
         eyebrow="Gestión inteligente de infraestructura"
         title="BIM y gemelos digitales para todo el ciclo de vida"
         desc="BIM, gemelos digitales, IA y construcción industrializada aplicados a la planificación, entrega, operación y gestión del ciclo de vida de infraestructura y edificaciones."
-        videoSrc="/videos/scroll-gestion-infraestructura.mp4"
-        posterSrc="/videos/scroll-gestion-infraestructura-poster.jpg"
+        videoSrc="/videos/scroll-gestion-infraestructura.416ab7fb.mp4"
+        posterSrc="/videos/scroll-gestion-infraestructura-poster.af50c0e8.jpg"
         fallbackIcon={Boxes}
       />
 
@@ -220,8 +224,8 @@ export function ScrollyShowcase() {
         eyebrow="Recursos y riesgo ambiental"
         title="Modelación hídrica para la resiliencia territorial"
         desc="Modelación hidrológica y de sistemas de recursos hídricos aplicada a la gestión de agua, energía y riesgo ambiental, en apoyo a la resiliencia territorial."
-        videoSrc="/videos/scroll-recursos-ambientales.mp4"
-        posterSrc="/videos/scroll-recursos-ambientales-poster.jpg"
+        videoSrc="/videos/scroll-recursos-ambientales.a7058501.mp4"
+        posterSrc="/videos/scroll-recursos-ambientales-poster.42bc3283.jpg"
         fallbackIcon={Droplets}
       />
     </section>

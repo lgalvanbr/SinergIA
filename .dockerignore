@@ -5,3 +5,11 @@ npm-debug.log*
 .env*
 .vercel
 *.tsbuildinfo
+scripts
+*.md
+.claude
+.vscode
+.idea
+coverage
+Dockerfile
+.dockerignore

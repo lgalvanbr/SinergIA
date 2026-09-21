@@ -7,17 +7,22 @@ const nextConfig: NextConfig = {
   // in production and stay small, instead of shipping the full node_modules.
   output: "standalone",
 
-  // Files under /public keep their literal filename (no content hash), so
-  // Next doesn't cache them aggressively by default — a fresh visitor would
-  // otherwise re-validate every background video on every page load. These
-  // clips do get swapped by overwriting the same path (see project memory),
-  // so this stays well short of `immutable`: a day of no-revalidation, then
-  // serve-stale-while-refetching for up to a week.
+  // Hides the floating dev badge (the "N" that shows Compiling…) in local dev.
+  devIndicators: false,
+
+  // /videos and /projects filenames carry a content hash (name.<sha1-8>.ext),
+  // so a changed clip always gets a new URL — safe to cache for a year.
+  // /data and /documentos keep their plain names and get overwritten in
+  // place, so they stay on a short cache with stale-while-revalidate.
   async headers() {
     return [
       {
         source: "/videos/:path*",
-        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+      {
+        source: "/projects/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
       {
         source: "/documentos/:path*",

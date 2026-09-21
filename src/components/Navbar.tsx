@@ -85,7 +85,7 @@ export function Navbar() {
             <span className={`h-8 sm:h-10 w-px shrink-0 ${onDark ? "bg-white/30" : "bg-black/20"}`} />
             {/* eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used elsewhere on this site for non-optimized real assets */}
             <img
-              src="/brand/sinergia-logo-horizontal.png"
+              src="/brand/sinergia-logo-horizontal.webp"
               alt="SinergIA"
               className={`h-8 sm:h-10 w-auto shrink-0 ${onDark ? "" : "invert"}`}
             />

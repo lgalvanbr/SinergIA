@@ -150,12 +150,12 @@ export function Hero() {
             loop
             muted
             playsInline
-            preload="auto"
-            poster="/videos/hero-sinergia-poster.jpg"
+            preload="metadata"
+            poster="/videos/hero-sinergia-poster.9ec5011f.jpg"
             onCanPlay={() => setVideoReady(true)}
             onError={() => setVideoAvailable(false)}
           >
-            <source src="/videos/hero-sinergia.mp4" type="video/mp4" />
+            <source src="/videos/hero-sinergia.9c3b7190.mp4" type="video/mp4" />
           </video>
         )}
 

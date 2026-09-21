@@ -26,7 +26,7 @@ const projects: Project[] = [
     icon: Map,
     glowPosition: "30% 40%",
     iconPosition: "-right-14 -bottom-14 sm:-right-10 sm:-bottom-16",
-    imageSrc: "/projects/infraestructura-visible-poster.jpg",
+    imageSrc: "/projects/infraestructura-visible-poster.67f0911e.jpg",
     content: <InfraestructuraVisibleProject />,
   },
   {
@@ -39,8 +39,8 @@ const projects: Project[] = [
     icon: Building2,
     glowPosition: "25% 75%",
     iconPosition: "-right-12 -bottom-16 sm:-right-8 sm:-bottom-20",
-    mediaSrc: "/projects/mesa-vibratoria.mp4",
-    posterSrc: "/projects/mesa-vibratoria-poster.jpg",
+    mediaSrc: "/projects/mesa-vibratoria.2d8b0b7c.mp4",
+    posterSrc: "/projects/mesa-vibratoria-poster.aede8723.jpg",
     content: <MesaVibratoria />,
   },
   {

@@ -15,7 +15,7 @@ const researchGroups = [
     // ingeco.uniandes.edu.co (sitio oficial citado por el departamento) está caído; se enlaza
     // la página del grupo dentro del sitio de la Facultad de Ingeniería como alternativa estable.
     url: "https://ingenieria.uniandes.edu.co/es/vicedecanatura-investigacion-innovacion/investigacion/grupos-investigacion",
-    logo: null,
+    logo: "/logos-grupos/in2geco.png",
   },
   {
     acronym: "CIMOC",
@@ -93,6 +93,7 @@ interface TeamMember {
   lines: string[];
   facts: { label: string; value: string }[];
   links: { label: string; href: string }[];
+  groupLogo?: { src: string; alt: string };
 }
 
 const team: TeamMember[] = [
@@ -123,6 +124,7 @@ const team: TeamMember[] = [
         href: "https://civilyambiental.uniandes.edu.co/en/professors/nelly-paola-garcia-lopez",
       },
     ],
+    groupLogo: { src: "/logos-grupos/in2geco.png", alt: "IN2GECO, Investigación en Ingeniería y Gerencia de la Construcción" },
   },
   {
     id: "juan-sebastian-hernandez",
@@ -157,7 +159,7 @@ const team: TeamMember[] = [
     eyebrow: "Asistente graduado de investigación",
     name: "Luis Carlos Galvan",
     desc: [
-      "Ingeniero civil con conocimientos en ingeniería de sistemas y robótica. Actualmente cursa la Maestría en Inteligencia Artificial y Datos aplicada a infraestructura del Departamento de Ingeniería Civil y Ambiental.",
+      "Ingeniero civil con conocimientos en ingeniería de sistemas y robótica. Actualmente cursa la Maestría en Inteligencia Artificial y Datos aplicada a infraestructura del Departamento de Ingeniería Civil y Ambiental. Hace parte del grupo de investigación IN2GECO (Ingeniería y Gerencia de la Construcción).",
       "Apoya al laboratorio con investigación y conocimientos avanzados en inteligencia artificial y desarrollo web — incluyendo la construcción de este sitio y de la plataforma Infraestructura Visible.",
     ],
     lines: [
@@ -171,11 +173,13 @@ const team: TeamMember[] = [
       { label: "Maestría (en curso)", value: "IA y Datos aplicada a Infraestructura" },
       { label: "Conocimientos", value: "Ingeniería de sistemas · Robótica" },
       { label: "Enfoque", value: "Inteligencia artificial · Desarrollo web" },
+      { label: "Grupo de investigación", value: "IN2GECO" },
     ],
     links: [
       { label: "l.galvan@uniandes.edu.co", href: "mailto:l.galvan@uniandes.edu.co" },
       { label: "GitHub", href: "https://github.com/lgalvanbr" },
     ],
+    groupLogo: { src: "/logos-grupos/in2geco.png", alt: "IN2GECO, Investigación en Ingeniería y Gerencia de la Construcción" },
   },
   {
     id: "juan-sebastian-geoingenia",
@@ -215,7 +219,7 @@ function TeamShowcase() {
 
   return (
     <div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
         {team.map((p) => {
           const isActive = p.id === activeId;
           return (
@@ -286,6 +290,16 @@ function TeamShowcase() {
           </div>
 
           <div className="space-y-3">
+            {active.groupLogo && (
+              <div className="pb-3">
+                {/* eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used for research-group logos in this file */}
+                <img
+                  src={active.groupLogo.src}
+                  alt={active.groupLogo.alt}
+                  className="h-24 w-auto mix-blend-multiply"
+                />
+              </div>
+            )}
             {active.facts.map((f) => (
               <div key={f.label}>
                 <p className="text-xs font-medium tracking-[0.1em] uppercase text-foreground-secondary">
@@ -453,7 +467,7 @@ export function QuienesSomos() {
         <div className="relative max-w-2xl mb-16">
           {/* eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used elsewhere on this site for non-optimized real assets */}
           <img
-            src="/brand/sinergia-logo-horizontal.png"
+            src="/brand/sinergia-logo-horizontal.webp"
             alt=""
             className="hidden sm:block absolute top-1/2 -translate-y-1/2 left-full ml-8 h-24 lg:h-32 w-auto invert opacity-[0.08] pointer-events-none select-none"
           />

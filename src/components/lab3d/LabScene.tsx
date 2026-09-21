@@ -232,6 +232,156 @@ function MeetingPod() {
   );
 }
 
+function RobotDuo() {
+  return (
+    <group>
+      {/* humanoid-style robot */}
+      <group>
+        {[-0.12, 0.12].map((x) => (
+          <mesh key={x} position={[x, 0.18, 0]} castShadow>
+            <cylinderGeometry args={[0.05, 0.05, 0.36, 10]} />
+            <meshStandardMaterial color={INK_SOFT} />
+          </mesh>
+        ))}
+        <mesh position={[0, 0.5, 0]} castShadow>
+          <boxGeometry args={[0.34, 0.4, 0.22]} />
+          <meshStandardMaterial color={INK} roughness={0.4} metalness={0.2} />
+        </mesh>
+        <mesh position={[0, 0.5, 0.115]}>
+          <circleGeometry args={[0.06, 16]} />
+          <meshStandardMaterial color={YELLOW} emissive={YELLOW} emissiveIntensity={1} />
+        </mesh>
+        {[-0.24, 0.24].map((x) => (
+          <mesh key={x} position={[x, 0.5, 0]} castShadow>
+            <cylinderGeometry args={[0.045, 0.045, 0.34, 10]} />
+            <meshStandardMaterial color={INK_SOFT} />
+          </mesh>
+        ))}
+        <mesh position={[0, 0.82, 0]} castShadow>
+          <sphereGeometry args={[0.14, 16, 16]} />
+          <meshStandardMaterial color={INK} roughness={0.3} />
+        </mesh>
+        {[-0.05, 0.05].map((x) => (
+          <mesh key={x} position={[x, 0.83, 0.12]}>
+            <circleGeometry args={[0.025, 12]} />
+            <meshStandardMaterial color={YELLOW} emissive={YELLOW} emissiveIntensity={1.2} />
+          </mesh>
+        ))}
+      </group>
+
+      {/* quadruped helper robot beside it */}
+      <group position={[0.75, 0, 0.35]}>
+        <mesh position={[0, 0.16, 0]} castShadow>
+          <boxGeometry args={[0.34, 0.14, 0.18]} />
+          <meshStandardMaterial color={INK_SOFT} roughness={0.5} />
+        </mesh>
+        {[
+          [-0.13, -0.08],
+          [0.13, -0.08],
+          [-0.13, 0.08],
+          [0.13, 0.08],
+        ].map(([x, z], i) => (
+          <mesh key={i} position={[x, 0.06, z]} castShadow>
+            <cylinderGeometry args={[0.02, 0.02, 0.12, 8]} />
+            <meshStandardMaterial color={INK} />
+          </mesh>
+        ))}
+        <mesh position={[0.2, 0.2, 0]}>
+          <sphereGeometry args={[0.02, 8, 8]} />
+          <meshStandardMaterial color={YELLOW} emissive={YELLOW} emissiveIntensity={1.2} />
+        </mesh>
+      </group>
+    </group>
+  );
+}
+
+function HoveringDrone() {
+  return (
+    <group position={[0, 0.85, 0]}>
+      <mesh rotation={[0, Math.PI / 4, 0]} castShadow>
+        <boxGeometry args={[0.8, 0.02, 0.03]} />
+        <meshStandardMaterial color={INK_SOFT} />
+      </mesh>
+      <mesh rotation={[0, -Math.PI / 4, 0]} castShadow>
+        <boxGeometry args={[0.8, 0.02, 0.03]} />
+        <meshStandardMaterial color={INK_SOFT} />
+      </mesh>
+      <mesh castShadow>
+        <boxGeometry args={[0.16, 0.07, 0.16]} />
+        <meshStandardMaterial color={INK} roughness={0.4} />
+      </mesh>
+      <mesh position={[0, -0.08, 0]} castShadow>
+        <sphereGeometry args={[0.045, 12, 12]} />
+        <meshStandardMaterial color={INK_SOFT} />
+      </mesh>
+      <mesh position={[0, 0.05, 0]}>
+        <sphereGeometry args={[0.015, 8, 8]} />
+        <meshStandardMaterial color={YELLOW} emissive={YELLOW} emissiveIntensity={1.5} />
+      </mesh>
+      {[
+        [0.28, 0.28],
+        [-0.28, 0.28],
+        [0.28, -0.28],
+        [-0.28, -0.28],
+      ].map(([x, z], i) => (
+        <mesh key={i} position={[x, 0.015, z]}>
+          <cylinderGeometry args={[0.16, 0.16, 0.01, 24]} />
+          <meshStandardMaterial color={INK} transparent opacity={0.35} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+function CameraRig() {
+  return (
+    <group>
+      {[0, 1, 2].map((i) => {
+        const a = (i / 3) * Math.PI * 2;
+        return (
+          <group key={i} rotation={[0, a, 0]}>
+            <mesh position={[0, 0.28, 0.22]} rotation={[Math.PI / 8, 0, 0]} castShadow>
+              <cylinderGeometry args={[0.014, 0.014, 0.58, 8]} />
+              <meshStandardMaterial color={INK_SOFT} />
+            </mesh>
+          </group>
+        );
+      })}
+      <mesh position={[0, 0.56, 0]} castShadow>
+        <cylinderGeometry args={[0.05, 0.06, 0.06, 12]} />
+        <meshStandardMaterial color={INK} />
+      </mesh>
+      <mesh position={[0, 0.62, 0]} castShadow>
+        <boxGeometry args={[0.2, 0.14, 0.16]} />
+        <meshStandardMaterial color={INK} roughness={0.35} metalness={0.15} />
+      </mesh>
+      <mesh position={[0, 0.62, 0.13]} rotation={[Math.PI / 2, 0, 0]} castShadow>
+        <cylinderGeometry args={[0.055, 0.06, 0.12, 16]} />
+        <meshStandardMaterial color={INK_SOFT} roughness={0.2} />
+      </mesh>
+      <mesh position={[0, 0.62, 0.19]}>
+        <circleGeometry args={[0.05, 16]} />
+        <meshStandardMaterial color={YELLOW} emissive={YELLOW} emissiveIntensity={0.6} />
+      </mesh>
+      {/* second camera further back, on a lower mount, to read as a small station */}
+      <group position={[-0.75, 0, -0.35]} scale={0.8}>
+        <mesh position={[0, 0.62, 0]} castShadow>
+          <boxGeometry args={[0.2, 0.14, 0.16]} />
+          <meshStandardMaterial color={INK} roughness={0.35} metalness={0.15} />
+        </mesh>
+        <mesh position={[0, 0.56, 0]} castShadow>
+          <cylinderGeometry args={[0.05, 0.06, 0.06, 12]} />
+          <meshStandardMaterial color={INK} />
+        </mesh>
+        <mesh position={[0, 0.28, 0]} castShadow>
+          <cylinderGeometry args={[0.02, 0.02, 0.56, 10]} />
+          <meshStandardMaterial color={INK_SOFT} />
+        </mesh>
+      </group>
+    </group>
+  );
+}
+
 function VizWall() {
   return (
     <group>
@@ -406,6 +556,18 @@ function SceneContent({
 
       <ZoneGroup id="instrumentacion" position={[-6, 0, 2.6]} active={hovered === "instrumentacion"} onHover={onHover} onSelect={onSelect}>
         <SensorBench />
+      </ZoneGroup>
+
+      <ZoneGroup id="robots" position={[1.5, 0, -1]} active={hovered === "robots"} onHover={onHover} onSelect={onSelect}>
+        <RobotDuo />
+      </ZoneGroup>
+
+      <ZoneGroup id="drones" position={[2, 0, 3.5]} active={hovered === "drones"} onHover={onHover} onSelect={onSelect}>
+        <HoveringDrone />
+      </ZoneGroup>
+
+      <ZoneGroup id="camaras" position={[-3.2, 0, -0.3]} active={hovered === "camaras"} onHover={onHover} onSelect={onSelect}>
+        <CameraRig />
       </ZoneGroup>
 
       <Plant position={[-7.3, 0, 4.3]} />

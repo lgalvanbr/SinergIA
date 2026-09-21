@@ -41,4 +41,25 @@ export const labZones: LabZone[] = [
       "Pantalla para comunicar hallazgos, mapas y tableros de datos a tomadores de decisión y comunidades académicas.",
     accent: "#ffde00",
   },
+  {
+    id: "robots",
+    label: "Robots",
+    description:
+      "Robots móviles e instrumentados para inspección de estructuras, captura de datos en campo y apoyo en tareas de construcción.",
+    accent: "#ffde00",
+  },
+  {
+    id: "drones",
+    label: "Drones",
+    description:
+      "Captura aérea para inspección de puentes y viaductos, y generación de gemelos digitales desde el aire.",
+    accent: "#ffde00",
+  },
+  {
+    id: "camaras",
+    label: "Cámaras",
+    description:
+      "Estaciones de captura visual y fotogrametría para alimentar los modelos de visión por computador del laboratorio.",
+    accent: "#ffde00",
+  },
 ];
