@@ -55,7 +55,7 @@ export function GeodataRioSinu() {
 
       <div className="flex flex-wrap gap-6 pt-6 border-t border-black/10">
         <a
-          href="https://casa-vibratoria.vercel.app/RioSinu.html"
+          href="https://casa-vibratoria.vercel.app/Rio%20Sinu/Index.html"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[15px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"

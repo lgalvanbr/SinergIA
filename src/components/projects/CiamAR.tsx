@@ -11,17 +11,16 @@ export function CiamAR() {
       <p className="text-[15px] sm:text-base text-foreground-secondary leading-relaxed mb-6">
         Visor 3D y de realidad aumentada (WebAR) para modelos del Laboratorio Sísmico CIAM:
         estructuras, puentes, vías, túneles e hidráulica, con catálogo de modelos y proyección en
-        AR desde el celular vía código QR, sin necesidad de instalar una app. Todavía está en
-        construcción, por lo que aquí solo lo dejamos referenciado.
+        AR desde el celular vía código QR, sin necesidad de instalar una app.
       </p>
 
       <a
-        href="https://github.com/lgalvanbr/ciamAR"
+        href="https://ciam-ar.vercel.app"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[15px] font-medium text-black underline decoration-yellow decoration-4 underline-offset-4 hover:decoration-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
       >
-        Ver repositorio
+        Abrir ciamAR
       </a>
     </div>
   );

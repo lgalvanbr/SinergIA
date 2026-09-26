@@ -17,7 +17,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
           <div className="space-y-4">
-            <UnitSignature />
+            <UnitSignature large levels={[["Facultad", "de Ingeniería"], ["Laboratorio", "SinergIA"]]} />
             <p className="text-sm leading-relaxed text-foreground-secondary max-w-xs">
               Laboratorio de inteligencia artificial para ciudades sostenibles y modernización,
               Departamento de Ingeniería Civil y Ambiental, Universidad de los Andes.

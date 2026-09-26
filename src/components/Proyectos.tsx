@@ -53,6 +53,7 @@ const projects: Project[] = [
     icon: Waves,
     glowPosition: "75% 25%",
     iconPosition: "-left-10 -bottom-16 sm:-left-6 sm:-bottom-20",
+    imageSrc: "/projects/rio-sinu.e66f7ba4.jpg",
     content: <GeodataRioSinu />,
   },
   {
@@ -65,6 +66,7 @@ const projects: Project[] = [
     icon: Scan,
     glowPosition: "50% 30%",
     iconPosition: "right-1/2 translate-x-1/2 -bottom-20",
+    imageSrc: "/projects/ciamar.4b6858cd.jpg",
     content: <CiamAR />,
   },
 ];

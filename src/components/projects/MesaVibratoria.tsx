@@ -68,14 +68,6 @@ export function MesaVibratoria() {
         >
           Ver demo en vivo
         </a>
-        <a
-          href="https://github.com/Sebastian-Rodrigueza/Casa-vibratoria"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[15px] font-medium text-foreground-secondary hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
-        >
-          Ver repositorio
-        </a>
       </div>
     </div>
   );

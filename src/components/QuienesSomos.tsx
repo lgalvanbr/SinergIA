@@ -18,6 +18,12 @@ const researchGroups = [
     logo: "/logos-grupos/in2geco.png",
   },
   {
+    acronym: "GeoIngenIA",
+    name: "Geomática e IA en Sistemas Ambientales y de Infraestructura Sostenible",
+    desc: "Grupo de investigación que aplica geomática e inteligencia artificial al análisis de sistemas ambientales y de infraestructura — percepción remota, datos geoespaciales y modelos de IA para entender y gestionar el territorio.",
+    logo: "/logos-grupos/geoingenia.png",
+  },
+  {
     acronym: "CIMOC",
     name: "Centro de Investigación en Materiales y Obras Civiles",
     desc: "Análisis, diseño y comportamiento de materiales e infraestructura vial; desarrollo de nuevas tecnologías y herramientas de análisis y diseño.",
@@ -47,7 +53,7 @@ const researchGroups = [
     desc: "Investigación aplicada en recursos hídricos e infraestructura de acueducto, alcantarillado y sistemas de agua potable y saneamiento.",
     director: "Prof. Juan Guillermo Saldarriaga Valderrama",
     url: "https://ciacua.uniandes.edu.co/",
-    logo: null,
+    logo: "/logos-grupos/ciacua.png",
   },
   {
     acronym: "SUR",
@@ -62,13 +68,7 @@ const researchGroups = [
     name: "Colaboratorio de Interacción, Visualización, Robótica y Sistemas Autónomos",
     desc: "Espacio colaborativo interdepartamental para realidad virtual y aumentada, interfaces humano-máquina, procesamiento de imágenes y robótica — 250 m² de equipos de conectividad, cómputo, visualización, robótica e interacción.",
     url: "https://colivri.uniandes.edu.co/",
-    logo: null,
-  },
-  {
-    acronym: "GeoIngenIA",
-    name: "Geomática e IA en Sistemas Ambientales y de Infraestructura Sostenible",
-    desc: "Grupo de investigación que aplica geomática e inteligencia artificial al análisis de sistemas ambientales y de infraestructura — percepción remota, datos geoespaciales y modelos de IA para entender y gestionar el territorio.",
-    logo: "/logos-grupos/geoingenia.png",
+    logo: "/logos-grupos/colivri.png",
   },
 ];
 
@@ -134,7 +134,7 @@ const team: TeamMember[] = [
     desc: [
       "Juan Sebastián es ingeniero civil con maestría en Ingeniería - Recursos Hidráulicos de la Universidad Nacional de Colombia, y doctor en Ingeniería de Biosistemas de Michigan State University. Recientemente fue investigador posdoctoral en la Universidad de Stanford, estudiando mercados de agua y sus efectos sobre la salud de los ecosistemas acuáticos. En Colombia ha trabajado con el Ministerio de Ambiente y Desarrollo Sostenible y la Autoridad Nacional de Licencias Ambientales en temas de caudales ambientales, regulación hídrica y gestión integral del agua.",
       "Como profesor asistente de la Universidad de los Andes, continúa utilizando modelación numérica, inteligencia artificial, sistemas de información geográfica y métodos evolucionarios de optimización multiobjetivo para entender y simular sistemas humanos y naturales acoplados en un contexto de variabilidad y cambio climático — con el fin de asistir la toma de decisiones multicriterio, el diseño de infraestructura civil y la formulación de políticas públicas. Le interesan particularmente las dinámicas multisectoriales en la intersección entre seguridad hídrica, alimentaria y energética, infraestructura civil y biodiversidad.",
-      "Dirige los laboratorios de Geomática y de Hidráulica del departamento. Dicta Sistemas de Información Geográfica en pregrado, y modelación de sistemas y procesos hidrológicos, modelación de hidrosistemas y gestión de recursos hídricos en los programas de posgrado.",
+      "Dirige los laboratorios de Geomática y de Hidráulica del departamento. Dicta Sistemas de Información Geográfica en pregrado, y modelación de sistemas y procesos hidrológicos, modelación de hidrosistemas y gestión de recursos hídricos en los programas de posgrado. Hace parte del grupo de investigación GeoIngenIA.",
     ],
     lines: [
       "Modelación hidrológica y de sistemas de recursos hídricos",
@@ -147,11 +147,13 @@ const team: TeamMember[] = [
       { label: "Posdoctorado", value: "Stanford University" },
       { label: "Maestría", value: "Universidad Nacional de Colombia" },
       { label: "Dirige", value: "Laboratorios de Geomática e Hidráulica" },
+      { label: "Grupo de investigación", value: "GeoIngenIA" },
     ],
     links: [
       { label: "js.hernandezs@uniandes.edu.co", href: "mailto:js.hernandezs@uniandes.edu.co" },
       { label: "Perfil académico", href: "https://academia.uniandes.edu.co/js.hernandezs" },
     ],
+    groupLogo: { src: "/logos-grupos/geoingenia.png", alt: "GeoIngenIA, Geomática e IA en Sistemas Ambientales y de Infraestructura Sostenible" },
   },
   {
     id: "luis-carlos-galvan",
@@ -188,7 +190,7 @@ const team: TeamMember[] = [
     name: "Juan Sebastián Rodríguez",
     desc: [
       "Ingeniero electrónico con conocimientos y experiencia en ingeniería de sistemas, automatización industrial, inteligencia artificial y ciencia de datos. Su experiencia integra el desarrollo de soluciones tecnológicas, incluyendo construcción y gestión de bases de datos, desarrollo de aplicaciones web y análisis de información, utilizando tecnologías como HTML, Python y herramientas de procesamiento de datos.",
-      "Actualmente desarrolla investigación en áreas relacionadas con inteligencia artificial, Deep Learning, análisis de datos e integración de tecnologías de captura y análisis espacial, incluyendo el uso de sensores LiDAR e información geoespacial para el desarrollo de soluciones aplicadas a la ingeniería.",
+      "Actualmente desarrolla investigación en áreas relacionadas con inteligencia artificial, Deep Learning, análisis de datos e integración de tecnologías de captura y análisis espacial, incluyendo el uso de sensores LiDAR e información geoespacial para el desarrollo de soluciones aplicadas a la ingeniería. Hace parte del grupo de investigación GeoIngenIA.",
     ],
     lines: [
       "Inteligencia artificial y Deep Learning",
@@ -203,6 +205,7 @@ const team: TeamMember[] = [
       { label: "Conocimientos", value: "Bases de datos · Desarrollo web · Python" },
     ],
     links: [],
+    groupLogo: { src: "/logos-grupos/geoingenia.png", alt: "GeoIngenIA, Geomática e IA en Sistemas Ambientales y de Infraestructura Sostenible" },
   },
 ];
 
@@ -296,7 +299,7 @@ function TeamShowcase() {
                 <img
                   src={active.groupLogo.src}
                   alt={active.groupLogo.alt}
-                  className="h-24 w-auto mix-blend-multiply"
+                  className="max-h-24 max-w-full h-auto w-auto mix-blend-multiply"
                 />
               </div>
             )}
@@ -378,21 +381,27 @@ const tabs: TabItem[] = [
           {researchGroups.map((g) => (
             <div
               key={g.acronym}
-              className="grid grid-cols-1 sm:grid-cols-[8rem_1fr] gap-3 sm:gap-6 p-5 border-r border-b border-black/10"
+              className="grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-3 sm:gap-6 p-5 border-r border-b border-black/10"
             >
               <div className="flex sm:flex-col items-center sm:items-start gap-3 sm:gap-2">
                 {g.logo ? (
-                  <img
-                    src={g.logo}
-                    alt={`Logo de ${g.acronym}`}
-                    className="h-8 w-auto max-w-[7rem] object-contain object-left"
-                  />
+                  <>
+                    <dt className="sr-only">{g.acronym}</dt>
+                    {/* eslint-disable-next-line @next/next/no-img-element -- matches the plain <img> pattern already used for research-group logos in this file */}
+                    <img
+                      src={g.logo}
+                      alt={`Logo de ${g.acronym}`}
+                      className="w-40 max-w-full max-h-20 object-contain object-left"
+                    />
+                  </>
                 ) : (
-                  <div className="flex items-center justify-center h-8 px-2 border border-black/10 rounded text-[11px] font-semibold tracking-wide text-black">
-                    {g.acronym}
-                  </div>
+                  <>
+                    <div className="flex items-center justify-center h-8 px-2 border border-black/10 rounded text-[11px] font-semibold tracking-wide text-black">
+                      {g.acronym}
+                    </div>
+                    <dt className="text-base font-semibold text-black">{g.acronym}</dt>
+                  </>
                 )}
-                <dt className="text-base font-semibold text-black">{g.acronym}</dt>
               </div>
               <dd className="text-[15px] text-foreground-secondary leading-relaxed">
                 <span className="text-black">{g.name}.</span> {g.desc}

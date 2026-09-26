@@ -47,8 +47,8 @@ const categories: LabCategory[] = [
       "AMD Threadripper 9980X de 64 núcleos, 512 GB DDR5 y 2× NVIDIA RTX 6000 Ada de 48 GB",
       "AMD Threadripper PRO 9995WX de 96 núcleos, 512 GB DDR5, 2× RTX 6000 Ada y red de 100 GbE",
       "2 equipos Ryzen 9 9950X con 256 GB DDR5 y NVIDIA RTX 5090 de 32 GB",
+      "GIGABYTE AI TOP ATOM, estación de IA de escritorio con NVIDIA GB10 Grace Blackwell, 128 GB de memoria unificada y hasta 1 petaFLOP en FP4",
     ],
-    stat: { value: "≈574", caption: "TFLOPS FP32 de pico teórico en 6 GPUs NVIDIA repartidas en 4 equipos" },
     video: { src: "/videos/lab-computo.14208a72.mp4", poster: "/videos/lab-computo-poster.d485f28f.jpg" },
   },
   {
@@ -86,7 +86,7 @@ const categories: LabCategory[] = [
       "DJI Mini para captura rápida y operación en espacios reducidos",
       "DJI Matrice 300 RTK para levantamientos de precisión",
     ],
-    video: { src: "/videos/laboratorio-robotica.e98e0753.mp4", poster: "/videos/laboratorio-robotica-poster.983564cb.jpg" },
+    video: { src: "/videos/lab-drones.11d0f6a3.mp4", poster: "/videos/lab-drones-poster.abdf837c.jpg" },
   },
   {
     code: "CAM",
